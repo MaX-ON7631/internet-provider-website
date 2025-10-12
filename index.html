@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPTelcom - Интернет провайдер в Минске и Гомеле</title>
+    <meta name="description" content="Высокоскоростной интернет и цифровое телевидение в Минске и Гомеле. Надежный провайдер IPTelcom." />
+    <meta name="author" content="IPTelcom" />
+    <meta property="og:title" content="IPTelcom - Интернет провайдер в Минске и Гомеле" />
+    <meta property="og:description" content="Высокоскоростной интернет и цифровое телевидение в Минске и Гомеле" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://iptel.by/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@iptelcom" />
+    <meta name="twitter:image" content="https://iptel.by/og-image.png" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- JavaScript Modules -->
+    <script defer src="js/tabs.js"></script>
+    <script defer src="js/audience-toggle.js"></script>
+    <script defer src="js/cookie-banner.js"></script>
+    <script defer src="js/city-switcher.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="js/carousel.js"></script>
+    <script defer src="js/bundle-toggle.js"></script>
+    <script defer src="js/header-scroll.js"></script>
+  </head>
+  <body data-audience="private">
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Logo -->
+        <a class="logo logo-v3" href="#">
+          <span class="logo-text"><span class="logo-ip">IP</span><span class="logo-telcom">Telcom</span></span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="main-nav desktop-nav">
+          <a href="#services">Услуги</a>
+          <a href="#about">О нас</a>
+          <a href="#news">Новости</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        
+        <!-- Desktop Actions -->
+        <div class="header-actions desktop-actions">
+          <div class="city-switcher" data-city-root role="combobox" aria-expanded="false" aria-haspopup="listbox">
+            <button class="city-button" data-city-btn aria-label="Выбрать город" aria-expanded="false">
+              <svg class="location-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span data-city-label>Минск</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="city-menu" data-city-menu role="listbox" aria-label="Список городов" hidden>
+              <button class="city-option" data-city-option="Минск" role="option" aria-selected="true">Минск</button>
+              <button class="city-option" data-city-option="Гомель" role="option" aria-selected="false">Гомель</button>
+            </div>
+          </div>
+          <div class="audience-toggle audience-toggle--desktop" role="group" aria-label="Выбор аудитории" data-audience-toggle="desktop">
+            <button type="button" class="audience-btn" data-audience="private" aria-pressed="true">Физ. лица</button>
+            <button type="button" class="audience-btn" data-audience="business" aria-pressed="false">Бизнес</button>
+          </div>
+          <a class="btn btn-primary desktop-user-btn" href="#">Личный кабинет</a>
+        </div>
+        
+        <!-- Mobile Actions -->
+        <div class="mobile-actions">
+          <div class="city-switcher mobile-city-switcher" data-city-root role="combobox" aria-expanded="false" aria-haspopup="listbox">
+            <button class="city-button" data-city-btn aria-label="Выбрать город" aria-expanded="false">
+              <svg class="location-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span data-city-label>Минск</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="city-menu" data-city-menu role="listbox" aria-label="Список городов" hidden>
+              <button class="city-option" data-city-option="Минск" role="option" aria-selected="true">Минск</button>
+              <button class="city-option" data-city-option="Гомель" role="option" aria-selected="false">Гомель</button>
+            </div>
+          </div>
+          
+          <button class="mobile-user-btn" aria-label="Личный кабинет">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <button class="mobile-menu-btn" data-mobile-menu-btn aria-label="Открыть меню" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu (moved outside header to avoid clipping by header stacking context) -->
+    <div class="mobile-menu" data-mobile-menu hidden>
+      <div class="mobile-menu-overlay" data-mobile-menu-overlay></div>
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <h3>Меню</h3>
+          <button class="mobile-menu-close" data-mobile-menu-close aria-label="Закрыть меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="mobile-nav">
+          <a href="#services" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20h.01"></path>
+              <path d="M2 8.82a15 15 0 0 1 20 0"></path>
+              <path d="M5 12.859a10 10 0 0 1 14 0"></path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
+            </svg>
+            <span>Услуги</span>
+          </a>
+          <a href="#about" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>О нас</span>
+          </a>
+          <a href="#news" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
+              <line x1="22" x2="12" y1="6" y2="13"></line>
+              <line x1="2" x2="12" y1="6" y2="13"></line>
+            </svg>
+            <span>Новости</span>
+          </a>
+          <a href="#contacts" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Контакты</span>
+          </a>
+        </nav>
+        
+        
+        
+        <div class="mobile-menu-footer">
+          <a href="#" class="btn btn-primary mobile-login-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Личный кабинет
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero-carousel">
+        <div class="carousel carousel-full carousel-hero" data-carousel="hero" data-carousel-interval="6500">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <article class="card hero-slide" data-carousel-slide style="--hero-image: url('img/telegram_slidebar.png');">
+                <div class="hero-slide__media" aria-hidden="true">
+                  <img src="img/telegram_slidebar.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                </div>
+                <div class="hero-slide__content">
+                  <div class="carousel-progress" data-carousel-progress></div>
+                  <span class="hero-slide__brand">Telegram</span>
+                  <h2>Управляйте услугами прямо из Telegram</h2>
+                  <p>Поддержка стала ещё ближе — теперь вы можете управлять услугами прямо в Telegram! Проверяйте баланс, заходите в личный кабинет, обращайтесь в техподдержку — всё в одном удобном боте. Быстро. Просто. Всегда под рукой.</p>
+                  <a class="btn btn-hero" href="#news">Подробнее</a>
+                </div>
+              </article>
+              <article class="card hero-slide" data-carousel-slide style="--hero-image: url('img/mts-sale-slidebar.png');">
+                <div class="hero-slide__media" aria-hidden="true">
+                  <img src="img/mts-sale-slidebar.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                </div>
+                <div class="hero-slide__content">
+                  <span class="hero-slide__brand">МТС × IPTelcom</span>
+                  <h2>Безлимит от МТС для клиентов IPTelcom</h2>
+                  <p>Подключите до 3 SIM-карт МТС с тарифом Безлимитище PRO — безлимитный интернет и звонки во все сети всего за 17 руб./мес. <br>Скидка доступна только клиентам АйПи ТелКом и действует на постоянной основе. <br>Всё просто — подключитесь и активируйте скидку через USSD-запрос.</p>
+                  <a class="btn btn-hero" href="#services">Получить скидку</a>
+                </div>
+              </article>
+              <article class="card hero-slide" data-carousel-slide style="--hero-image: url('img/social-tarif-slidebar.png');">
+                <div class="hero-slide__media" aria-hidden="true">
+                  <img src="img/social-tarif-slidebar.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                </div>
+                <div class="hero-slide__content">
+                  <span class="hero-slide__brand">Акция</span>
+                  <h2>Тариф «Социальный» — доступный интернет</h2>
+                  <p>Специальный тариф для льготных категорий граждан: 10 Мбит/с всего за 13 руб./мес.<br>Подходит инвалидам, многодетным семьям, ветеранам и другим.<br>Мы ценим каждого — подключайтесь на особых условиях.</p>
+                  <a class="btn btn-hero" href="#contacts">Подключить</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev" aria-label="Назад" type="button">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="carousel-btn next" aria-label="Вперёд" type="button">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="carousel-dots" data-carousel-dots></div>
+        </div>
+      </section>
+
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1>
+            Высокоскоростной интернет
+            <span class="text-gradient">для вашего дома</span>
+          </h1>
+          <div class="audience-toggle audience-toggle--mobile" role="group" aria-label="Выбор аудитории" data-audience-toggle="mobile">
+            <button type="button" class="audience-btn" data-audience="private" aria-pressed="true">Для дома</button>
+            <button type="button" class="audience-btn" data-audience="business" aria-pressed="false">Для бизнеса</button>
+          </div>
+          <p>Надежный провайдер с более чем 20-летним опытом работы в Минске и Гомеле</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contacts">Подключить интернет</a>
+            <a class="btn btn-outline" href="#services">Узнать тарифы</a>
+          </div>
+          <div class="hero-features">
+            <div class="feature">
+              <span class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi" aria-hidden="true">
+                  <path d="M12 20h.01"></path>
+                  <path d="M2 8.82a15 15 0 0 1 20 0"></path>
+                  <path d="M5 12.859a10 10 0 0 1 14 0"></path>
+                  <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
+                </svg>
+              </span>
+              <h3>Интернет</h3>
+              <p>До 1000 Мбит/с</p>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv" aria-hidden="true">
+                  <rect width="20" height="15" x="2" y="7" rx="2" ry="2"></rect>
+                  <polyline points="17 2 12 7 7 2"></polyline>
+                </svg>
+              </span>
+              <h3>Телевидение</h3>
+              <p>150+ каналов</p>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <h3>Телефония</h3>
+              <p>Звонки по РБ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="news">
+        <div class="container news-inner">
+          <header class="news-header">
+            <h2 class="news-title">Новости</h2>
+            <p class="news-subtitle">Последние обновления компании и предложения для абонентов.</p>
+          </header>
+          <ul class="news-list">
+            <li>
+              <a class="news-item" href="news/domashniy-plus.html">
+                <div class="news-item__meta">
+                  <time datetime="2025-10-10">10 октября 2025</time>
+                </div>
+                <div class="news-item__content">
+                  <h3 class="news-item__title">Теперь можно пополнить баланс через Telegram-бота</h3>
+                  <span class="news-item__arrow" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="news/gomel-expansion.html">
+                <div class="news-item__meta">
+                  <time datetime="2025-10-05">5 октября 2025</time>
+                </div>
+                <div class="news-item__content">
+                  <h3 class="news-item__title">Расширяем покрытие в Минске</h3>
+                  <span class="news-item__arrow" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="news/speed-upgrade.html">
+                <div class="news-item__meta">
+                  <time datetime="2025-09-28">28 сентября 2025</time>
+                </div>
+                <div class="news-item__content">
+                  <h3 class="news-item__title">Тариф «Социальный» стал ещё доступнее</h3>
+                  <span class="news-item__arrow" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="news-footer">
+            <a class="btn btn-primary news-view-all" href="news/">Смотреть все</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-head center">
+            <h2>Тарифы</h2>
+            <p>Выберите подходящий для вас тариф</p>
+          </div>
+
+          <div class="bundle-switch">
+            <button class="bundle-switch__btn is-active" data-bundle-mode="internet">Только интернет</button>
+            <button class="bundle-switch__btn" data-bundle-mode="bundle">Интернет + ТВ</button>
+            <button class="bundle-switch__btn" data-bundle-mode="antivirus">Антивирус</button>
+            <button class="bundle-switch__btn bundle-switch__btn--mts" data-bundle-mode="mts" aria-label="Специальное предложение МТС и АйПи ТелКом">
+              <span class="bundle-switch__btn-title">
+                МТС × <span class="bundle-switch__btn-ip">IP</span><span class="bundle-switch__btn-telcom">Telcom</span>
+              </span>
+              <span class="bundle-switch__btn-badge">Акция</span>
+            </button>
+          </div>
+
+          <div class="pricing-grid" data-pricing-grid>
+            <article class="tariff-card" data-plan="turbo">
+              <div class="tariff-head">
+                <span class="tariff-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 8.82a15 15 0 0 1 20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12.859a10 10 0 0 1 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <h3 class="tariff-title">Турбо</h3>
+              </div>
+              <p class="tariff-tagline">Сёрфинг, соцсети и видео в HD без задержек</p>
+              <div class="tariff-speed"><span>100</span> Мбит/с</div>
+              <div class="tariff-meter meter-20"></div>
+              <div class="tariff-chips">
+                <span class="chip">HD‑видео</span>
+                <span class="chip">Соцсети</span>
+                <span class="chip">Музыка</span>
+              </div>
+              <div class="tariff-price" data-price>
+                <span class="price-value" data-price-value>20.00</span>
+                <span class="price-currency">руб./мес.</span>
+              </div>
+              <div class="bundle-extras" data-tv-extra hidden>
+                <div class="bundle-extra__price">Добавить ТВ + <span data-price-diff>7.00</span> руб./мес.</div>
+                <div class="bundle-extra__chips">
+                  <span class="chip chip-soft">130+ каналов</span>
+                  <span class="chip chip-soft">HD/4K контент</span>
+                  <span class="chip chip-soft">Архив до 7 дней</span>
+                </div>
+              </div>
+              <label class="bundle-toggle">
+                <input type="checkbox" data-bundle-toggle>
+                <span class="bundle-toggle__rail"></span>
+                <span class="bundle-toggle__label">Добавить ТВ</span>
+              </label>
+              <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+            </article>
+
+            <article class="tariff-card" data-plan="mega200">
+              <div class="tariff-badge">Выбор многих</div>
+              <div class="tariff-head">
+                <span class="tariff-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M10 9l6 3-6 3V9Z" fill="currentColor"/></svg>
+                </span>
+                <h3 class="tariff-title">Мега 200</h3>
+              </div>
+              <p class="tariff-tagline">Фильмы в Full HD, стриминги и онлайн‑обучение</p>
+              <div class="tariff-speed"><span>200</span> Мбит/с</div>
+              <div class="tariff-meter meter-40"></div>
+              <div class="tariff-chips">
+                <span class="chip">Full HD</span>
+                <span class="chip">Стриминг</span>
+                <span class="chip">Облака</span>
+              </div>
+              <div class="tariff-price" data-price>
+                <span class="price-value" data-price-value>30.00</span>
+                <span class="price-currency">руб./мес.</span>
+              </div>
+              <div class="bundle-extras" data-tv-extra hidden>
+                <div class="bundle-extra__price">Добавить ТВ + <span data-price-diff>7.00</span> руб./мес.</div>
+                <div class="bundle-extra__chips">
+                  <span class="chip chip-soft">130+ каналов</span>
+                  <span class="chip chip-soft">Кинотека</span>
+                  <span class="chip chip-soft">Профиль для семьи</span>
+                </div>
+              </div>
+              <label class="bundle-toggle">
+                <input type="checkbox" data-bundle-toggle>
+                <span class="bundle-toggle__rail"></span>
+                <span class="bundle-toggle__label">Добавить ТВ</span>
+              </label>
+              <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+            </article>
+
+            <article class="tariff-card" data-plan="mega300">
+              <div class="tariff-head">
+                <span class="tariff-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0v5H4v-5Z" stroke="currentColor" stroke-width="2"/><path d="M10 18v-2a2 2 0 0 1 4 0v2" stroke="currentColor" stroke-width="2"/></svg>
+                </span>
+                <h3 class="tariff-title">Мега 300</h3>
+              </div>
+              <p class="tariff-tagline">Для семьи: 4K видео, облака и большие файлы</p>
+              <div class="tariff-speed"><span>300</span> Мбит/с</div>
+              <div class="tariff-meter meter-60"></div>
+              <div class="tariff-chips">
+                <span class="chip">4K‑видео</span>
+                <span class="chip">Облака</span>
+                <span class="chip">Смарт‑дом</span>
+              </div>
+              <div class="tariff-price" data-price>
+                <span class="price-value" data-price-value>35.00</span>
+                <span class="price-currency">руб./мес.</span>
+              </div>
+              <div class="bundle-extras" data-tv-extra hidden>
+                <div class="bundle-extra__price">Добавить ТВ + <span data-price-diff>7.00</span> руб./мес.</div>
+                <div class="bundle-extra__chips">
+                  <span class="chip chip-soft">150+ каналов</span>
+                  <span class="chip chip-soft">Sports & Kids</span>
+                  <span class="chip chip-soft">2 приставки</span>
+                </div>
+              </div>
+              <label class="bundle-toggle">
+                <input type="checkbox" data-bundle-toggle>
+                <span class="bundle-toggle__rail"></span>
+                <span class="bundle-toggle__label">Добавить ТВ</span>
+              </label>
+              <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+            </article>
+
+            <article class="tariff-card tariff-featured" data-plan="mega500">
+              <div class="tariff-badge">Рекомендуем</div>
+              <div class="tariff-head">
+                <span class="tariff-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                </span>
+                <h3 class="tariff-title">Мега 500</h3>
+              </div>
+              <p class="tariff-tagline">Максимум для 4K/8K, гейминга и стриминга</p>
+              <div class="tariff-speed"><span>500</span> Мбит/с</div>
+              <div class="tariff-meter meter-100"></div>
+              <div class="tariff-chips">
+                <span class="chip">4K/8K</span>
+                <span class="chip">Гейминг</span>
+                <span class="chip">Стриминг</span>
+              </div>
+              <div class="tariff-price" data-price>
+                <span class="price-value" data-price-value>45.00</span>
+                <span class="price-currency">руб./мес.</span>
+              </div>
+              <div class="bundle-extras" data-tv-extra hidden>
+                <div class="bundle-extra__price">Добавить ТВ + <span data-price-diff>7.00</span> руб./мес.</div>
+                <div class="bundle-extra__chips">
+                  <span class="chip chip-soft">4 приставки</span>
+                  <span class="chip chip-soft">Киберспорт</span>
+                  <span class="chip chip-soft">8K Ready</span>
+                </div>
+              </div>
+              <label class="bundle-toggle">
+                <input type="checkbox" data-bundle-toggle>
+                <span class="bundle-toggle__rail"></span>
+                <span class="bundle-toggle__label">Добавить ТВ</span>
+              </label>
+              <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+            </article>
+
+            <article class="tariff-card tariff-social" data-plan="social">
+              <span class="tariff-note" tabindex="0" aria-label="Льготные категории" data-tooltip="Относится к следующим категориям граждан: инвалидам всех групп; семьям, воспитывающим детей-инвалидов до 18 лет; многодетным семьям; детским домам семейного типа; ветеранам ВОВ; воинам-интернационалистам">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+              </span>
+              <div class="tariff-head">
+                <span class="tariff-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </span>
+                <h3 class="tariff-title">Социальный</h3>
+              </div>
+              <p class="tariff-tagline">Базовые задачи, мессенджеры и госуслуги</p>
+              <div class="tariff-speed"><span>10</span> Мбит/с</div>
+              <div class="tariff-meter meter-10"></div>
+              <div class="tariff-chips">
+                <span class="chip">Сёрфинг</span>
+                <span class="chip">Почта</span>
+                <span class="chip">Мессенджеры</span>
+              </div>
+              <div class="tariff-price" data-price>
+                <span class="price-value" data-price-value>13.00</span>
+                <span class="price-currency">руб./мес.</span>
+              </div>
+              <div class="bundle-extras bundle-extras--disabled" data-tv-extra hidden>
+                <div class="bundle-extra__price">ТВ недоступно для льготного тарифа</div>
+              </div>
+              <label class="bundle-toggle is-disabled">
+                <input type="checkbox" data-bundle-toggle disabled>
+                <span class="bundle-toggle__rail"></span>
+                <span class="bundle-toggle__label">Добавить ТВ</span>
+              </label>
+              <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+            </article>
+          </div>
+
+          <div class="antivirus-grid" data-antivirus-grid hidden>
+            <article class="antivirus-card">
+              <div class="antivirus-head">
+                <span class="antivirus-chip">KAV</span>
+                <h3>Kaspersky Anti-Virus</h3>
+              </div>
+              <p class="antivirus-text">Базовая защита компьютера: антивирус автоматически сканирует систему и помогает быстро нейтрализовать угрозы.</p>
+              <ul class="antivirus-list">
+                <li>Автосканирование и блокировка вирусов</li>
+                <li>Удаление вредоносных программ без потери данных</li>
+                <li>Поддержание стабильной работы устройства</li>
+              </ul>
+              <div class="antivirus-actions">
+                <a class="btn btn-primary" href="#contacts">Узнать цену</a>
+                <a class="antivirus-link" href="https://www.kaspersky.ru/antivirus" target="_blank" rel="noopener">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="antivirus-card">
+              <div class="antivirus-head">
+                <span class="antivirus-chip">KIS</span>
+                <h3>Kaspersky Internet Security</h3>
+              </div>
+              <p class="antivirus-text">Комплексная защита для всей цифровой жизни: безопасные платежи, приватность и защита от современных угроз.</p>
+              <ul class="antivirus-list">
+                <li>Щит от вирусов, шифровальщиков и фишинга</li>
+                <li>Защита личных данных и общения</li>
+                <li>Безопасные онлайн-покупки и банки</li>
+              </ul>
+              <div class="antivirus-actions">
+                <a class="btn btn-primary" href="#contacts">Узнать цену</a>
+                <a class="antivirus-link" href="https://www.kaspersky.ru/internet-security" target="_blank" rel="noopener">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="antivirus-card">
+              <div class="antivirus-head">
+                <span class="antivirus-chip">Safe Kids</span>
+                <h3>Kaspersky Safe Kids</h3>
+              </div>
+              <p class="antivirus-text">Родительский контроль и GPS-трекер для Windows, Mac и мобильных устройств в едином решении.</p>
+              <ul class="antivirus-list">
+                <li>Гибкие правила времени у экрана</li>
+                <li>Мониторинг активности и контента</li>
+                <li>GPS-трекинг и уведомления родителям</li>
+              </ul>
+              <div class="antivirus-actions">
+                <a class="btn btn-primary" href="#contacts">Узнать цену</a>
+                <a class="antivirus-link" href="https://www.kaspersky.ru/safe-kids" target="_blank" rel="noopener">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+          <section class="mts-offer" data-mts-offer hidden>
+            <div class="mts-offer__spark" aria-hidden="true"></div>
+            <div class="mts-offer__glow" aria-hidden="true"></div>
+            <div class="mts-offer__content">
+              <header class="mts-offer__header">
+                <span class="mts-offer__badge">Совместное предложение</span>
+                <span class="mts-offer__logo" aria-hidden="true">
+                  <span class="mts-offer__logo-mark mts-offer__logo-mark--mts">МТС</span>
+                  <span class="mts-offer__logo-cross">×</span>
+                  <span class="mts-offer__logo-mark mts-offer__logo-mark--ipt"><span class="logo-ip">IP</span><span class="logo-telcom">Telcom</span></span>
+                </span>
+              </header>
+              <div class="mts-offer__body">
+                <h3 class="mts-offer__title">Безлимитище PRO со скидкой для клиентов «АйПи ТелКом»</h3>
+                <p class="mts-offer__subtitle">До 3 сим-карт МТС — безлимитный интернет и звонки во все сети всего за 17 руб./мес. Пока вы с нами — скидка действует автоматически.</p>
+                <ul class="mts-offer__list">
+                  <li><strong>Как получить:</strong> подключите интернет от «АйПи ТелКом» и активируйте МТС тариф.</li>
+                  <li><strong>USSD-команда:</strong> <span class="mts-offer__code">*831*ЛС#</span> — укажите номер лицевого счёта.</li>
+                  <li><strong>Контроль тарифа:</strong> приложение «Мой МТС» или личный кабинет.</li>
+                </ul>
+              </div>
+              <footer class="mts-offer__footer">
+                <a class="btn btn-mts" href="#contacts">Оставить заявку</a>
+                <p class="mts-offer__note">При просрочке оплаты более 30 дней скидка отключается — подключить снова можно тем же USSD-запросом.</p>
+              </footer>
+            </div>
+          </section>
+
+          <section class="addon-callout">
+            <div class="addon-content">
+              <div class="addon-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="addon-body">
+                <h3>Городские телефоны</h3>
+                <p>При подключении по технологии GPON вы можете добавить городскую телефонную связь от IPTelcom.</p>
+                <ul>
+                  <li>Безлимитные звонки по городу Минску</li>
+                  <li>Междугородние и международные — по тарифам РУП «Белтелеком»</li>
+                  <li>3,50 руб./мес за номер (включая НДС)</li>
+                </ul>
+              </div>
+            </div>
+            <a class="btn btn-outline" href="#contacts">Оставить заявку</a>
+          </section>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container about-inner">
+          <div class="about-head">
+            <h2>Информация о компании</h2>
+          </div>
+          <div class="about-layout">
+            <div class="about-intro">
+              <p class="about-lead">Компания “АйПи ТелКом” была создана в 2001 г. как Интернет-провайдер. В дальнейшем наши направления деятельности постепенно дополнялись и расширялись. Неизменны лишь два основных принципа нашей работы — мы используем объективный индивидуальный подход к каждому клиенту и беремся за задачи, которые выполним в срок с ожидаемым результатом.</p>
+            </div>
+            <div class="about-intro">
+              <p>К настоящему моменту мы:</p>
+              <ul>
+                <li>подключаем к Интернету по технологии Ethernet и GPON в Минске и Гомеле;</li>
+                <li>предоставляем услуги телефонии, IP-телевидения, хостинга, и другие сопутствующие услуги электросвязи;</li>
+                <li>обслуживаем компьютеры, серверы и локальные сети предприятий;</li>
+                <li>строим компьютерные сети по технологии GPON, Ethernet, прокладываем оптоволокно.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="contacts" class="site-footer site-footer--dark">
+      <div class="container footer-top">
+        <section class="footer-col footer-about">
+          <div class="footer-brand-wrap">
+            <h3 class="footer-brand">IP Telcom</h3>
+          </div>
+          <p class="footer-text">ООО «АйПи ТелКом» – Интернет Сервис Провайдер (ISP), работающий с 2001 года на рынке Беларуси, имеет статус LIR и зарегистрирован в RIPE NCC.</p>
+          <p class="footer-text footer-license">Лицензия №02140/293 (бессрочная) Министерства связи и информатизации.</p>
+          <div class="footer-actions">
+            <a class="footer-link" href="/policy/cookies.html">Политика Cookie</a>
+            <a class="footer-cta" href="#" data-open-cookies>Изменить настройки Cookie</a>
+          </div>
+        </section>
+
+        <section class="footer-col footer-city footer-card">
+          <h4>Минск</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <span class="footer-item-label">Техподдержка</span>
+              <p class="footer-item-text">Будние 09:00–22:00<br>Выходные 09:00–21:00</p>
+            </li>
+            <li class="footer-item">
+              <span class="footer-item-label">Отдел продаж</span>
+              <p class="footer-item-text">Будние 09:00–18:00</p>
+            </li>
+            <li class="footer-item">
+              <span class="footer-item-label">Офис</span>
+              <p class="footer-item-text">220073, г. Минск, ул. Кальварийская, д. 42, офис 3.</p>
+            </li>
+            <li class="footer-item">
+              <span class="footer-item-label">Юр. адрес</span>
+              <p class="footer-item-text">220013, г. Минск, ул. П. Бровки, д. 18, пом. 4.</p>
+            </li>
+            <li class="footer-item">
+              <span class="footer-item-label">Телефон</span>
+              <div class="footer-item-text footer-item-text--stack">
+                <a class="footer-link footer-link--nowrap" href="tel:+375173887000">+375 (17) 388 70 00</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer-col footer-docs">
+          <h4>Документы</h4>
+          <ul class="footer-docs-list">
+            <li class="footer-docs-group">
+              <span class="footer-docs-group-title">Правовые документы и договоры</span>
+              <ul class="footer-docs-links">
+                <li><a class="footer-docs-link" href="/documents/terms-of-telecommunication-services.html">Порядок оказания услуг электросвязи абонентам ООО "АйПи ТелКом"</a></li>
+                <li><a class="footer-docs-link" href="/documents/personal-data-protection-policy.html">Политика ООО "АйПи ТелКом" в области защиты персональных данных</a></li>
+                <li><a class="footer-docs-link" href="/documents/telecommunication-service-agreement.html">Договор об оказании услуг электросвязи</a></li>
+                <li><a class="footer-docs-link" href="/documents/ip-tv-agreement-for-individuals.html">Договор на IP TV между ЧП "Ваш Интернет" и клиентом - физическим лицом</a></li>
+              </ul>
+            </li>
+            <li class="footer-docs-group">
+              <span class="footer-docs-group-title">Информация об услугах и оплате</span>
+              <ul class="footer-docs-links">
+                <li><a class="footer-docs-link" href="/documents/quality-indicators.html">Показатели качества</a></li>
+                <li><a class="footer-docs-link" href="/documents/price-list.html">Прейскурант</a></li>
+                <li><a class="footer-docs-link" href="/documents/payment-locations.html">Где оплатить</a></li>
+                <li><a class="footer-docs-link" href="/documents/coverage-map.html">Покрытие оптоволоконной сети</a></li>
+              </ul>
+            </li>
+            <li class="footer-docs-group">
+              <span class="footer-docs-group-title">Общая информация о компании</span>
+              <ul class="footer-docs-links">
+                <li><a class="footer-docs-link" href="/documents/company-details.html">Реквизиты</a></li>
+                <li><a class="footer-docs-link" href="/documents/licenses-and-certificates.html">Документы и лицензии</a></li>
+                <li><a class="footer-docs-link" href="/documents/job-openings.html">Вакансии</a></li>
+                <li><a class="footer-docs-link" href="/documents/telegram-bot-guide.html">Памятка по использованию Telegram-бота</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="container footer-bottom">
+        <a class="footer-icon-link" href="https://t.me/help_iptelcom_bot" target="_blank" rel="noopener noreferrer" aria-label="IPTelcom в Telegram">
+          <img src="img/tg_for_footer.svg" alt="" />
+        </a>
+        <p>© 2025 IPTelcom. Все права защищены.</p>
+        <nav class="footer-links">
+          <a class="footer-link" href="#">Политика конфиденциальности</a>
+          <a class="footer-link" href="#">Пользовательское соглашение</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="cookie-banner" data-cookie-banner hidden>
+      <p>Мы используем файлы cookie для улучшения работы сайта и предоставления персонализированного контента. Продолжая использовать сайт, вы соглашаетесь с <a href="#">политикой использования cookie</a>.</p>
+      <div class="actions">
+        <button class="btn btn-primary" data-accept-cookies>Принять</button>
+        <button class="btn" data-decline-cookies>Отклонить</button>
+        <button class="btn btn-icon" data-close-cookies aria-label="Закрыть">×</button>
+      </div>
+    </div>
+   
+    <!-- Floating Telegram Support (desktop only) -->
+    <aside class="contact-fab" role="complementary" aria-label="Написать в Telegram">
+      <a class="contact-fab__link" href="https://t.me/help_iptelcom_bot" target="_blank" rel="noopener" aria-label="Открыть чат @help_iptelcom_bot в Telegram">
+        <span class="contact-fab__icon">
+          <img src="img/tg_for_footer.svg" alt="" />
+        </span>
+      </a>
+    </aside>
+  </body>
+  
+</html>

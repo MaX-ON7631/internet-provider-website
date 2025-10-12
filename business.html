@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPTelcom для бизнеса - Интернет провайдер</title>
+    <meta name="description" content="Интернет и услуги связи для бизнеса. Надежный провайдер IPTelcom." />
+    <meta name="author" content="IPTelcom" />
+    <meta property="og:title" content="IPTelcom для бизнеса" />
+    <meta property="og:description" content="Интернет и услуги связи для бизнеса" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://iptel.by/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@iptelcom" />
+    <meta name="twitter:image" content="https://iptel.by/og-image.png" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- JavaScript Modules -->
+    <script defer src="js/tabs.js"></script>
+    <script defer src="js/audience-toggle.js"></script>
+    <script defer src="js/cookie-banner.js"></script>
+    <script defer src="js/city-switcher.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="js/carousel.js"></script>
+    <script defer src="js/header-scroll.js"></script>
+  </head>
+  <body data-audience="business">
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Logo -->
+        <a class="logo logo-v3" href="#">
+          <span class="logo-text"><span class="logo-ip">IP</span><span class="logo-telcom">Telcom</span></span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="main-nav desktop-nav">
+          <a href="#services">Услуги</a>
+          <a href="#about">О нас</a>
+          <a href="#news">Новости</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        
+        <!-- Desktop Actions -->
+        <div class="header-actions desktop-actions">
+          <div class="city-switcher" data-city-root role="combobox" aria-expanded="false" aria-haspopup="listbox">
+            <button class="city-button" data-city-btn aria-label="Выбрать город" aria-expanded="false">
+              <svg class="location-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span data-city-label>Минск</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="city-menu" data-city-menu role="listbox" aria-label="Список городов" hidden>
+              <button class="city-option" data-city-option="Минск" role="option" aria-selected="true">Минск</button>
+              <button class="city-option" data-city-option="Гомель" role="option" aria-selected="false">Гомель</button>
+            </div>
+          </div>
+          <div class="audience-toggle audience-toggle--desktop" role="group" aria-label="Выбор аудитории" data-audience-toggle="desktop">
+            <button type="button" class="audience-btn" data-audience="private" aria-pressed="false">Физ. лица</button>
+            <button type="button" class="audience-btn" data-audience="business" aria-pressed="true">Бизнес</button>
+          </div>
+          <a class="btn btn-primary desktop-user-btn" href="#">Личный кабинет</a>
+        </div>
+        
+        <!-- Mobile Actions -->
+        <div class="mobile-actions">
+          <div class="city-switcher mobile-city-switcher" data-city-root role="combobox" aria-expanded="false" aria-haspopup="listbox">
+            <button class="city-button" data-city-btn aria-label="Выбрать город" aria-expanded="false">
+              <svg class="location-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span data-city-label>Минск</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="city-menu" data-city-menu role="listbox" aria-label="Список городов" hidden>
+              <button class="city-option" data-city-option="Минск" role="option" aria-selected="true">Минск</button>
+              <button class="city-option" data-city-option="Гомель" role="option" aria-selected="false">Гомель</button>
+            </div>
+          </div>
+          
+          <button class="mobile-user-btn" aria-label="Личный кабинет">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <button class="mobile-menu-btn" data-mobile-menu-btn aria-label="Открыть меню" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" data-mobile-menu hidden>
+      <div class="mobile-menu-overlay" data-mobile-menu-overlay></div>
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <h3>Меню</h3>
+          <button class="mobile-menu-close" data-mobile-menu-close aria-label="Закрыть меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="mobile-nav">
+          <a href="#services" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20h.01"></path>
+              <path d="M2 8.82a15 15 0 0 1 20 0"></path>
+              <path d="M5 12.859a10 10 0 0 1 14 0"></path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
+            </svg>
+            <span>Услуги</span>
+          </a>
+          <a href="#about" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>О нас</span>
+          </a>
+          <a href="#news" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
+              <line x1="22" x2="12" y1="6" y2="13"></line>
+              <line x1="2" x2="12" y1="6" y2="13"></line>
+            </svg>
+            <span>Новости</span>
+          </a>
+          <a href="#contacts" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Контакты</span>
+          </a>
+        </nav>
+        
+        <div class="mobile-menu-footer">
+          <a href="#" class="btn btn-primary mobile-login-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Личный кабинет
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1>
+            Высокоскоростной интернет
+            <span class="text-gradient">для вашего бизнеса</span>
+          </h1>
+          <div class="audience-toggle audience-toggle--mobile" role="group" aria-label="Выбор аудитории" data-audience-toggle="mobile">
+            <button type="button" class="audience-btn" data-audience="private" aria-pressed="false">Для дома</button>
+            <button type="button" class="audience-btn" data-audience="business" aria-pressed="true">Для бизнеса</button>
+          </div>
+          <p>Надежный провайдер с более чем 20-летним опытом работы в Минске и Гомеле</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contacts">Оставить заявку</a>
+            <a class="btn btn-outline" href="#services">Узнать решения</a>
+          </div>
+          <div class="hero-features">
+            <div class="feature">
+              <span class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi" aria-hidden="true">
+                  <path d="M12 20h.01"></path>
+                  <path d="M2 8.82a15 15 0 0 1 20 0"></path>
+                  <path d="M5 12.859a10 10 0 0 1 14 0"></path>
+                  <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
+                </svg>
+              </span>
+              <h3>Интернет</h3>
+              <p>Выделенные каналы</p>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv" aria-hidden="true">
+                  <rect width="20" height="15" x="2" y="7" rx="2" ry="2"></rect>
+                  <polyline points="17 2 12 7 7 2"></polyline>
+                </svg>
+              </span>
+              <h3>Телевидение</h3>
+              <p>Корпоративные пакеты</p>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <h3>Телефония</h3>
+              <p>SIP‑trunk, многоканальная связь</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="news">
+        <div class="section-head center">
+          <div class="container">
+            <h2>Новости и кейсы</h2>
+            <p>Актуальные предложения и внедрения для бизнеса</p>
+          </div>
+        </div>
+        <div class="carousel carousel-full" data-carousel="news">
+            <button class="carousel-btn prev" aria-label="Назад" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <article class="card">
+                  <a class="card-link" href="#" aria-label="Подробнее: Выделенные каналы для офиса">
+                    <img src="img/news-internet.svg" alt="Выделенные каналы для офиса" />
+                    <div class="card-badges">
+                      <span class="badge badge-type">Решения</span>
+                      <span class="badge badge-city">Минск</span>
+                    </div>
+                    <div class="card-content">
+                      <h3>Выделенные каналы для офиса</h3>
+                      <p>Гарантированная пропускная способность</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+            <button class="carousel-btn next" aria-label="Вперёд" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="carousel-dots" data-carousel-dots></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-head center">
+            <h2>Решения для бизнеса</h2>
+            <p>Связь и интернет для компаний любого масштаба</p>
+          </div>
+
+          <div class="tabs" data-tabs>
+            <div class="tablist" role="tablist">
+              <button role="tab" aria-selected="false" data-tab="private">Физические лица</button>
+              <button role="tab" aria-selected="true" data-tab="business">Юридические лица</button>
+            </div>
+            <div class="tabpanels">
+              <div role="tabpanel" data-panel="private" hidden>
+                <div class="service-cards">
+                  <article class="service-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iMTIiIGZpbGw9IiNFRUYyRkYiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTguNSAxNmEzLjUgMy41IDAgMSAxIDcgMCIgc3Ryb2tlPSIjMjU2M0VCIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTUgMTJhNyA3IDAgMCAxIDE0IDAiIHN0cm9rZT0iIzI1NjNFQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yIDhhMTAgMTAgMCAwIDEgMjAgMCIgc3Ryb2tlPSIjMjU2M0VCIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cjwvc3ZnPg==" alt="Интернет" />
+                    <h3>Интернет</h3>
+                    <p>Высокоскоростной оптоволоконный интернет до 1 Гбит/с</p>
+                  </article>
+                </div>
+              </div>
+              <div role="tabpanel" data-panel="business">
+                <div class="service-cards">
+                  <article class="service-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iMTIiIGZpbGw9IiNFRUYyRkYiLz4KPHN2ZyB4PSIxNiIgeT0iMTYiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTguNSAxNmEzLjUgMy41IDAgMSAxIDcgMCIgc3Ryb2tlPSIjMjU2M0VCIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTUgMTJhNyA3IDAgMCAxIDE0IDAiIHN0cm9rZT0iIzI1NjNFQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yIDhhMTAgMTAgMCAwIDEgMjAgMCIgc3Ryb2tlPSIjMjU2M0VCIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cjwvc3ZnPg==" alt="Интернет для бизнеса" />
+                    <h3>Интернет для бизнеса</h3>
+                    <p>Выделенные каналы и приоритетная поддержка</p>
+                    <ul>
+                      <li>SLA 99.9%</li>
+                      <li>Гибкие тарифы</li>
+                      <li>Быстрое подключение</li>
+                    </ul>
+                    <p class="price">по запросу</p>
+                    <a class="btn btn-primary" href="#contacts">Оставить заявку</a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-head center">
+            <h2>О компании IPTelcom</h2>
+            <p>Решения корпоративного уровня для устойчивой работы вашего бизнеса</p>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0A9 9 0 0 0 3 12Z" stroke="currentColor" stroke-width="2"/></svg></div>
+              <div class="stat-num">500+</div>
+              <div class="stat-label">Корпоративных клиентов</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="2"/></svg></div>
+              <div class="stat-num">2</div>
+              <div class="stat-label">Города присутствия</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20V4M8 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Лет на рынке</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="stat-num">99.9%</div>
+              <div class="stat-label">Время безотказной работы</div>
+            </div>
+          </div>
+          <p class="about-text">IPTelcom предоставляет выделенные каналы, резервирование, приоритетную поддержку и индивидуальные решения для бизнеса.</p>
+        </div>
+      </section>
+
+      <section id="contacts" class="contacts">
+        <div class="container grid">
+          <div>
+            <h3>Минск</h3>
+            <ul class="contact-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> ул. Примерная, 123</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 12 19a19.86 19.86 0 0 1-7.82 2.92A2 2 0 0 1 2 19.92v-3A2 2 0 0 1 3.82 15a12.05 12.05 0 0 0 16.36 0A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2"/><path d="M16 5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" stroke="currentColor" stroke-width="2"/></svg> +375 (17) 123-45-67</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg> minsk@iptel.by</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Гомель</h3>
+            <ul class="contact-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> ул. Образцовая, 45</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 12 19a19.86 19.86 0 0 1-7.82 2.92A2 2 0 0 1 2 19.92v-3A2 2 0 0 1 3.82 15a12.05 12.05 0 0 0 16.36 0A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2"/><path d="M16 5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" stroke="currentColor" stroke-width="2"/></svg> +375 (232) 123-45-67</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg> gomel@iptel.by</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <h3 class="logo">IPTelcom</h3>
+          <p>Современный интернет-провайдер в Минске и Гомеле</p>
+          <a class="btn btn-outline" href="#">Telegram поддержка</a>
+        </div>
+        <div>
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Интернет</a></li>
+            <li><a href="#">Телевидение</a></li>
+            <li><a href="#">Телефония</a></li>
+            <li><a href="#">Тарифы</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Минск</h4>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> ул. Примерная, 123</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 12 19a19.86 19.86 0 0 1-7.82 2.92A2 2 0 0 1 2 19.92v-3A2 2 0 0 1 3.82 15a12.05 12.05 0 0 0 16.36 0A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2"/><path d="M16 5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" stroke="currentColor" stroke-width="2"/></svg> +375 (17) 123-45-67</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg> minsk@iptel.by</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Гомель</h4>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> ул. Образцовая, 45</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 12 19a19.86 19.86 0 0 1-7.82 2.92A2 2 0 0 1 2 19.92v-3A2 2 0 0 1 3.82 15a12.05 12.05 0 0 0 16.36 0A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2"/><path d="M16 5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" stroke="currentColor" stroke-width="2"/></svg> +375 (232) 123-45-67</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg> gomel@iptel.by</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2025 IPTelcom. Все права защищены.</p>
+        <nav class="footer-links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Пользовательское соглашение</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="cookie-banner" data-cookie-banner hidden>
+      <p>Мы используем файлы cookie для улучшения работы сайта и предоставления персонализированного контента. Продолжая использовать сайт, вы соглашаетесь с <a href="#">политикой использования cookie</a>.</p>
+      <div class="actions">
+        <button class="btn btn-primary" data-accept-cookies>Принять</button>
+        <button class="btn" data-decline-cookies>Отклонить</button>
+        <button class="btn btn-icon" data-close-cookies aria-label="Закрыть">×</button>
+      </div>
+    </div>
+   
+    <!-- Floating Telegram Support (desktop only) -->
+    <a class="floating-tg" href="#" target="_blank" rel="noopener" aria-label="Поддержка в Telegram">
+      <span class="floating-tg__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M22 2 11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 2 15 22l-4-9-9-4 20-7z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="floating-tg__label">Поддержка</span>
+    </a>
+  </body>
+  
+</html>
+
+
