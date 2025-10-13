@@ -83,7 +83,7 @@
   overflow: hidden;
   box-shadow: 0 28px 65px rgba(15,23,42,.35);
   /* prepare for fade animation */
-  opacity: 0.88;
+  opacity: 1;
   transition: opacity .5s ease;
 }
 
@@ -91,7 +91,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(9,12,27,.85) 0%, rgba(9,12,27,.65) 55%, rgba(9,12,27,.15) 100%);
+  background: linear-gradient(90deg, rgba(9,12,27,.85) 0%, rgba(9,12,27,.65) 0%, rgba(9,12,27,.15) 0%);
   z-index: 1;
 }
 
@@ -880,7 +880,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.0) 35%, rgba(0,0,0,0.6) 100%);
+  /* background: linear-gradient(180deg, rgba(0,0,0,0.0) 35%, rgba(0,0,0,0.6) 100%); */
   pointer-events: none;
 }
 
