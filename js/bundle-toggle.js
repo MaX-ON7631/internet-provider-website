@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function activateBundleState(card, planPrice) {
     const switchInput = card.querySelector('[data-bundle-toggle]');
     const tvExtra = card.querySelector('[data-tv-extra]');
-    const priceDiff = card.querySelector('[data-price-diff]');
     const cta = card.querySelector('[data-cta]');
     const priceValue = card.querySelector('[data-price-value]');
 
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tvExtra.hidden = false;
     switchInput.checked = true;
     switchInput.disabled = false;
-    if (priceDiff) priceDiff.textContent = planPrice.diff;
     const totalPrice = (parseFloat(planPrice.internet) + parseFloat(planPrice.diff)).toFixed(2);
     priceValue.textContent = totalPrice;
     cta.textContent = 'Выбрать интернет + ТВ';
@@ -76,17 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const planPrice = PRICE_MAP[plan];
       if (!planPrice) return;
 
+      // Reset to base state first
       applyBaseState(card, planPrice);
 
-      if (isAntivirus) return;
-
-      if (mode === 'bundle') {
-        if (planPrice.diff) {
-          activateBundleState(card, planPrice);
-        } else {
-          const tvExtra = card.querySelector('[data-tv-extra]');
-          if (tvExtra) tvExtra.hidden = false;
-        }
+      // In bundle mode, auto-enable TV for all cards with a bundle diff (non-social)
+      if (mode === 'bundle' && planPrice.diff) {
+        activateBundleState(card, planPrice);
       }
     });
   }

@@ -130,15 +130,23 @@
 .hero-slide__brand {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.14);
-  border: 1px solid rgba(255,255,255,.28);
-  font-size: 14px;
+  gap: 16px;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: .12em;
+  letter-spacing: .38em;
   text-transform: uppercase;
+  color: rgba(255,255,255,.68);
+  opacity: .92;
+}
+
+.hero-slide__brand::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,0) 100%);
 }
 
 .hero-slide h2 {
@@ -150,7 +158,8 @@
 
 .hero-slide p {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 1.6;
   color: rgba(255,255,255,.78);
 }
@@ -611,6 +620,7 @@
 /* News section */
 .news {
   padding: 88px 0;
+  --container-max: min(1360px, 96vw);
 }
 
 .news-inner {
@@ -1615,6 +1625,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0,1fr));
   gap: 16px;
+  align-items: stretch; /* equalize card heights within each row */
 }
 
 .tariff-card {
@@ -1623,15 +1634,17 @@
   border-radius: 16px;
   background: #fff;
   padding: 20px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   box-shadow: 0 10px 28px rgba(0,0,0,.06);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  min-height: 100%;
 }
 
 .tariff-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 44px rgba(0,0,0,.10);
+  box-shadow: 0 18px 44px rgba(0,0,0,.10), 0 0 0 3px rgba(37,99,235,.08);
   border-color: rgba(37,99,235,.35);
 }
 
@@ -1643,17 +1656,32 @@
 
 .tariff-badge {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 6px 10px;
+  top: -10px; /* overlap the card edge */
+  right: 14px;
+  padding: 8px 12px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   color: #fff;
-  background: var(--primary);
-  border: 1px solid rgba(255,255,255,.28);
+  background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+  border: 1px solid rgba(255,255,255,.35);
   border-radius: 999px;
-  letter-spacing: .2px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 24px rgba(37,99,235,0.25);
+  transform: rotate(-4deg);
+  z-index: 3;
+  pointer-events: none; /* decorative */
 }
+
+/* Badge position and color variants */
+.tariff-badge--left { left: 14px; right: auto; }
+.tariff-badge--right { right: 14px; left: auto; }
+.tariff-badge--popular { background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 10px 24px rgba(5,150,105,0.25); }
+.tariff-badge--recommended { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); box-shadow: 0 10px 24px rgba(217,119,6,0.25); }
+
+/* Auto color for known cards */
+.tariff-card.tariff-featured .tariff-badge { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); box-shadow: 0 10px 24px rgba(217,119,6,0.25); }
+.tariff-card[data-plan="mega200"] .tariff-badge { background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 10px 24px rgba(5,150,105,0.25); }
 
 .tariff-title {
   margin: 0 0 4px;
@@ -1681,6 +1709,7 @@
   gap: 6px;
   font-size: 14px;
   color: var(--muted);
+  min-height: 32px; /* keep price row aligned */
 }
 
 .price-value {
@@ -1699,18 +1728,12 @@
   background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(59,130,246,0.12));
 }
 
-.bundle-extras--disabled {
-  border-style: dashed;
-  border-color: rgba(148,163,184,0.6);
-  background: linear-gradient(135deg, rgba(148,163,184,0.12), rgba(226,232,240,0.18));
-  color: #64748b;
-}
+/* Ensure hidden attribute actually hides bundle extras despite author styles */
+.bundle-extras[hidden] { display: none !important; }
 
-.bundle-extra__price {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--fg);
-}
+.bundle-extras--disabled { border-style: dashed; border-color: rgba(148,163,184,0.6); background: linear-gradient(135deg, rgba(148,163,184,0.12), rgba(226,232,240,0.18)); color: #64748b; }
+
+/* .bundle-extra__price removed per new UI (no price line inside bundle extras) */
 
 .bundle-extra__chips {
   display: flex;
@@ -1724,12 +1747,19 @@
   color: var(--primary);
 }
 
+/* interaction area at the bottom of tariff cards */
+.tariff-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .bundle-toggle {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 10px;
-  margin-top: 8px;
   font-size: 13px;
   color: var(--muted);
   cursor: pointer;
@@ -1933,8 +1963,9 @@
   color: var(--muted);
 }
 
-.tariff-card .btn {
-  margin-top: 4px;
+/* ensure the button fills the bottom of the action stack */
+.tariff-actions .btn {
+  min-height: 44px;
 }
 
 /* Enhanced tariff UI */
@@ -1960,12 +1991,15 @@
   margin: 0;
   color: var(--muted);
   font-size: 13px;
+  line-height: 1.45;
+  min-height: calc(1.45em * 2); /* reserve space for up to two lines */
 }
 
 .tariff-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  min-height: 48px; /* keep chips area consistent height */
 }
 
 .chip {
@@ -2088,13 +2122,18 @@
   transform: translateY(0);
 }
 
+.bundle-switch-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .bundle-switch {
   display: inline-flex;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 4px;
   background: linear-gradient(135deg, #ffffff 0%, #f5f7fb 100%);
-  margin-bottom: 20px;
   box-shadow: 0 12px 32px rgba(15,23,42,.1);
   gap: 4px;
 }
@@ -2244,6 +2283,7 @@
 .about {
   padding: clamp(88px, 10vw, 120px) 0;
   background: #fff;
+  --container-max: min(1360px, 96vw);
 }
 
 .about-inner { display: grid; gap: 28px; }

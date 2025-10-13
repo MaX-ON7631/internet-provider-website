@@ -14,6 +14,15 @@
   .carousel-hero {
     padding: 110px 0 44px;
   }
+  .audience-section__panel {
+    padding: clamp(32px, 6vw, 64px);
+  }
+  .audience-section__content {
+    gap: 16px;
+  }
+  .audience-section__cta {
+    min-width: 180px;
+  }
   .hero-slide {
     padding: 64px 64px;
     min-height: 420px;
@@ -69,6 +78,18 @@
   .hero-features {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
+  }
+  .audience-section__panel {
+    padding: clamp(32px, 5.5vw, 56px);
+  }
+  .audience-section__eyebrow {
+    font-size: 12px;
+  }
+  .audience-section h2 {
+    font-size: clamp(30px, 4vw, 40px);
+  }
+  .audience-section__cta {
+    min-width: 160px;
   }
   .carousel-hero {
     padding: 100px 0 40px;
@@ -191,8 +212,20 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
   }
-  .feature {
-    padding: 20px;
+  .audience-section {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+  .audience-section__panel {
+    padding: clamp(28px, 6vw, 48px);
+  }
+  .audience-section__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .audience-section__cta {
+    width: 100%;
+    min-width: auto;
   }
   .carousel-hero {
     padding: 88px 0 36px;
@@ -324,7 +357,6 @@
     width: 32px;
     height: 32px;
   }
-
   /* Footer */
   .footer-top {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -340,7 +372,7 @@
   .footer-docs-group-title {
     font-size: 14px;
   }
-  .site-footer--dark .footer-city {
+  .site-footer--dark . footer-city {
     grid-column: auto;
     grid-row: auto;
   }
@@ -402,6 +434,9 @@
   .hero {
     padding: 48px 0 32px;
   }
+  .hero--split {
+    padding: 56px 0;
+  }
   .hero h1 {
     font-size: 32px;
     line-height: 1.1;
@@ -422,6 +457,39 @@
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .hero-card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+  .hero-card__badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .hero-card__features {
+    gap: 8px;
+  }
+  .hero-card__features li {
+    padding: 10px 12px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+  .hero-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+  .hero-card h1 {
+    font-size: 30px;
+  }
+  .hero-card h2 {
+    font-size: 26px;
+  }
+  .hero-card__features h3 {
+    font-size: 16px;
+  }
+  .hero-card__features p {
+    font-size: 13px;
   }
   .hero-features .feature:nth-child(3) {
     grid-column: 1 / -1;
