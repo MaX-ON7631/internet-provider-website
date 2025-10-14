@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const antivirusGrid = document.querySelector('[data-antivirus-grid]');
   const antivirusInfo = document.querySelector('[data-antivirus-info]');
   const mtsOffer = document.querySelector('[data-mts-offer]');
+  const pricingArrow = document.querySelector('[data-pricing-arrow]');
 
   if (!bundleSwitchRoot || !pricingGrid) return;
 
@@ -21,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const PRICE_MAP = {
     turbo: { internet: '20.00', diff: '7.00' },
     mega200: { internet: '30.00', diff: '7.00' },
-    mega300: { internet: '35.00', diff: '7.00' },
-    mega500: { internet: '45.00', diff: '7.00' },
-    social: { internet: '13.00', diff: null }
+    mega500: { internet: '45.00', diff: '7.00' }
   };
 
   function applyBaseState(card, planPrice) {
@@ -61,26 +60,20 @@ document.addEventListener('DOMContentLoaded', () => {
     pricingGrid.setAttribute('data-pricing-mode', mode);
 
     const isAntivirus = mode === 'antivirus';
-    const isPricingVisible = mode === 'internet' || mode === 'bundle';
-    toggleSection(pricingGrid, isPricingVisible);
+    toggleSection(pricingGrid, mode === 'internet');
     toggleSection(antivirusGrid, isAntivirus);
     toggleSection(antivirusInfo, isAntivirus);
+    toggleSection(pricingArrow, mode === 'internet');
     toggleSection(mtsOffer, mode === 'mts');
 
-    if (!isPricingVisible) return;
+    if (mode !== 'internet') return;
 
     pricingGrid.querySelectorAll('[data-plan]').forEach((card) => {
       const plan = card.getAttribute('data-plan');
       const planPrice = PRICE_MAP[plan];
       if (!planPrice) return;
 
-      // Reset to base state first
       applyBaseState(card, planPrice);
-
-      // In bundle mode, auto-enable TV for all cards with a bundle diff (non-social)
-      if (mode === 'bundle' && planPrice.diff) {
-        activateBundleState(card, planPrice);
-      }
     });
   }
 
@@ -104,18 +97,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = event.target;
     if (!input.matches('[data-bundle-toggle]')) return;
 
-    const card = input.closest('[data-plan]');
-    if (!card) return;
+    const shouldEnable = input.checked;
 
-    const plan = card.getAttribute('data-plan');
-    const planPrice = PRICE_MAP[plan];
-    if (!planPrice) return;
+    pricingGrid.querySelectorAll('[data-plan]').forEach((card) => {
+      const plan = card.getAttribute('data-plan');
+      const planPrice = PRICE_MAP[plan];
+      if (!planPrice) return;
 
-    if (input.checked && planPrice.diff) {
-      activateBundleState(card, planPrice);
-    } else {
-      applyBaseState(card, planPrice);
-    }
+      const cardInput = card.querySelector('[data-bundle-toggle]');
+      if (!cardInput || cardInput.disabled) return;
+
+      if (shouldEnable) {
+        activateBundleState(card, planPrice);
+      } else {
+        applyBaseState(card, planPrice);
+      }
+    });
   });
 
   setMode('internet');

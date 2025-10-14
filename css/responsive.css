@@ -36,6 +36,12 @@
   .pricing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .pricing-grid-holder {
+    padding-right: 0;
+  }
+  .pricing-all-floating {
+    display: none;
+  }
   .tariff-speed span {
     font-size: 36px;
   }
@@ -140,6 +146,15 @@
   }
   .pricing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pricing-grid-holder {
+    padding-right: 0;
+  }
+  .pricing-all-floating {
+    position: static;
+    transform: none;
+    margin-top: 12px;
+    justify-content: flex-end;
   }
   .tariff-speed span {
     font-size: 34px;
@@ -372,7 +387,7 @@
   .footer-docs-group-title {
     font-size: 14px;
   }
-  .site-footer--dark . footer-city {
+  .site-footer--dark .footer-city {
     grid-column: auto;
     grid-row: auto;
   }
@@ -916,5 +931,45 @@
   }
   .audience-toggle--mobile {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-all-link__icon {
+    font-size: 32px;
+  }
+  .pricing-all-link__label {
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-layout {
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-layout__spacer {
+    display: none;
+  }
+
+  .pricing-grid-holder {
+    width: 100%;
+    padding-left: var(--page-padding, 16px);
+    padding-right: var(--page-padding, 16px);
+  }
+
+  .pricing-grid {
+    margin: 0 auto;
+  }
+
+  .pricing-layout__aside[data-pricing-arrow] {
+    display: none;
+  }
+
+  .pricing-all-mobile {
+    display: block;
+    padding: 0 var(--page-padding, 16px);
   }
 }

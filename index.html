@@ -315,8 +315,7 @@
 
           <div class="bundle-switch-wrapper">
             <div class="bundle-switch">
-              <button class="bundle-switch__btn is-active" data-bundle-mode="internet">Только интернет</button>
-              <button class="bundle-switch__btn" data-bundle-mode="bundle">Интернет + ТВ</button>
+              <button class="bundle-switch__btn is-active" data-bundle-mode="internet">Интернет</button>
               <button class="bundle-switch__btn" data-bundle-mode="antivirus">Антивирус</button>
               <button class="bundle-switch__btn bundle-switch__btn--mts" data-bundle-mode="mts" aria-label="Специальное предложение МТС и АйПи ТелКом">
                 <span class="bundle-switch__btn-title">
@@ -327,185 +326,138 @@
             </div>
           </div>
 
-          <div class="pricing-grid" data-pricing-grid>
-            <article class="tariff-card" data-plan="turbo">
-              <div class="tariff-head">
-                <span class="tariff-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 8.82a15 15 0 0 1 20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12.859a10 10 0 0 1 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-                <h3 class="tariff-title">Турбо</h3>
-              </div>
-              <p class="tariff-tagline">Сёрфинг, соцсети и видео в HD без задержек</p>
-              <div class="tariff-speed"><span>100</span> Мбит/с</div>
-              <div class="tariff-meter meter-20"></div>
-              <div class="tariff-chips">
-                <span class="chip">HD</span>
-                <span class="chip">Соцсети</span>
-                <span class="chip">Музыка</span>
-              </div>
-              <div class="tariff-price" data-price>
-                <span class="price-value" data-price-value>20.00</span>
-                <span class="price-currency">руб./мес.</span>
-              </div>
-              <div class="bundle-extras" data-tv-extra hidden>
-                <div class="bundle-extra__chips">
-                  <span class="chip chip-soft">130+ каналов</span>
-                  <span class="chip chip-soft">HD/4K контент</span>
-                  <span class="chip chip-soft">Архив до 7 дней</span>
+          <div class="pricing-layout">
+            <div class="pricing-layout__spacer" aria-hidden="true"></div>
+            <div class="pricing-grid-holder">
+              <div class="pricing-grid" data-pricing-grid>
+              <article class="tariff-card tariff-card--popular" data-plan="mega200">
+                <div class="tariff-badge">Хит продаж</div>
+                <div class="tariff-head">
+                  <span class="tariff-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M10 9l6 3-6 3V9Z" fill="currentColor"/></svg>
+                  </span>
+                  <h3 class="tariff-title">Мега 200</h3>
                 </div>
-              </div>
-              <div class="tariff-actions">
-                <label class="bundle-toggle">
-                  <input type="checkbox" data-bundle-toggle>
-                  <span class="bundle-toggle__rail"></span>
-                  <span class="bundle-toggle__label">Добавить ТВ</span>
-                </label>
-                <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
-              </div>
-            </article>
-
-            <article class="tariff-card" data-plan="mega200">
-              <div class="tariff-badge">Выбор многих</div>
-              <div class="tariff-head">
-                <span class="tariff-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M10 9l6 3-6 3V9Z" fill="currentColor"/></svg>
-                </span>
-                <h3 class="tariff-title">Мега 200</h3>
-              </div>
-              <p class="tariff-tagline">Фильмы в Full HD, стриминги и онлайн‑обучение</p>
-              <div class="tariff-speed"><span>200</span> Мбит/с</div>
-              <div class="tariff-meter meter-40"></div>
-              <div class="tariff-chips">
-                <span class="chip">Full HD</span>
-                <span class="chip">Стриминг</span>
-                <span class="chip">Облака</span>
-              </div>
-              <div class="tariff-price" data-price>
-                <span class="price-value" data-price-value>30.00</span>
-                <span class="price-currency">руб./мес.</span>
-              </div>
-              <div class="bundle-extras" data-tv-extra hidden>
-                <div class="bundle-extra__chips">
-                  <span class="chip chip-soft">130+ каналов</span>
-                  <span class="chip chip-soft">Кинотека</span>
-                  <span class="chip chip-soft">Профиль для семьи</span>
+                <p class="tariff-tagline">Сбалансированный тариф для семьи, стриминга и учёбы</p>
+                <div class="tariff-speed"><span>200</span> Мбит/с</div>
+                <div class="tariff-meter meter-40"></div>
+                <div class="tariff-chips">
+                  <span class="chip">Full HD</span>
+                  <span class="chip">Стриминг</span>
+                  <span class="chip">Облака</span>
                 </div>
-              </div>
-              <div class="tariff-actions">
-                <label class="bundle-toggle">
-                  <input type="checkbox" data-bundle-toggle>
-                  <span class="bundle-toggle__rail"></span>
-                  <span class="bundle-toggle__label">Добавить ТВ</span>
-                </label>
-                <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
-              </div>
-            </article>
-
-            <article class="tariff-card" data-plan="mega300">
-              <div class="tariff-head">
-                <span class="tariff-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0v5H4v-5Z" stroke="currentColor" stroke-width="2"/><path d="M10 18v-2a2 2 0 0 1 4 0v2" stroke="currentColor" stroke-width="2"/></svg>
-                </span>
-                <h3 class="tariff-title">Мега 300</h3>
-              </div>
-              <p class="tariff-tagline">Для семьи: 4K видео, облака и большие файлы</p>
-              <div class="tariff-speed"><span>300</span> Мбит/с</div>
-              <div class="tariff-meter meter-60"></div>
-              <div class="tariff-chips">
-                <span class="chip">4K</span>
-                <span class="chip">Облака</span>
-                <span class="chip">Смарт‑дом</span>
-              </div>
-              <div class="tariff-price" data-price>
-                <span class="price-value" data-price-value>35.00</span>
-                <span class="price-currency">руб./мес.</span>
-              </div>
-              <div class="bundle-extras" data-tv-extra hidden>
-                <div class="bundle-extra__chips">
-                  <span class="chip chip-soft">150+ каналов</span>
-                  <span class="chip chip-soft">Sports & Kids</span>
-                  <span class="chip chip-soft">2 приставки</span>
+                <div class="tariff-price" data-price>
+                  <span class="price-value" data-price-value>30.00</span>
+                  <span class="price-currency">руб./мес.</span>
                 </div>
-              </div>
-              <div class="tariff-actions">
-                <label class="bundle-toggle">
-                  <input type="checkbox" data-bundle-toggle>
-                  <span class="bundle-toggle__rail"></span>
-                  <span class="bundle-toggle__label">Добавить ТВ</span>
-                </label>
-                <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
-              </div>
-            </article>
-
-            <article class="tariff-card tariff-featured" data-plan="mega500">
-              <div class="tariff-badge">Рекомендуем</div>
-              <div class="tariff-head">
-                <span class="tariff-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                </span>
-                <h3 class="tariff-title">Мега 500</h3>
-              </div>
-              <p class="tariff-tagline">Максимум для 4K/8K, гейминга и стриминга</p>
-              <div class="tariff-speed"><span>500</span> Мбит/с</div>
-              <div class="tariff-meter meter-100"></div>
-              <div class="tariff-chips">
-                <span class="chip">4K/8K</span>
-                <span class="chip">Гейминг</span>
-                <span class="chip">Стриминг</span>
-              </div>
-              <div class="tariff-price" data-price>
-                <span class="price-value" data-price-value>45.00</span>
-                <span class="price-currency">руб./мес.</span>
-              </div>
-              <div class="bundle-extras" data-tv-extra hidden>
-                <div class="bundle-extra__chips">
-                  <span class="chip chip-soft">4 приставки</span>
-                  <span class="chip chip-soft">Киберспорт</span>
-                  <span class="chip chip-soft">8K Ready</span>
+                <div class="bundle-extras" data-tv-extra hidden>
+                  <div class="bundle-extra__chips">
+                    <span class="chip chip-soft">130+ каналов</span>
+                    <span class="chip chip-soft">Кинотека</span>
+                    <span class="chip chip-soft">Профиль для семьи</span>
+                  </div>
                 </div>
-              </div>
-              <div class="tariff-actions">
-                <label class="bundle-toggle">
-                  <input type="checkbox" data-bundle-toggle>
-                  <span class="bundle-toggle__rail"></span>
-                  <span class="bundle-toggle__label">Добавить ТВ</span>
-                </label>
-                <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
-              </div>
-            </article>
+                <div class="tariff-actions">
+                  <label class="bundle-toggle">
+                    <input type="checkbox" data-bundle-toggle>
+                    <span class="bundle-toggle__rail"></span>
+                    <span class="bundle-toggle__label">Добавить ТВ</span>
+                  </label>
+                  <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+                </div>
+              </article>
 
-            <article class="tariff-card tariff-social" data-plan="social">
-              <span class="tariff-note" tabindex="0" aria-label="Льготные категории" data-tooltip="Относится к следующим категориям граждан: инвалидам всех групп; семьям, воспитывающим детей-инвалидов до 18 лет; многодетным семьям; детским домам семейного типа; ветеранам ВОВ; воинам-интернационалистам">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+              <article class="tariff-card tariff-featured tariff-card--flagship" data-plan="mega500">
+                <div class="tariff-badge">Лучший выбор</div>
+                <div class="tariff-head">
+                  <span class="tariff-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                  </span>
+                  <h3 class="tariff-title">Мега 500</h3>
+                </div>
+                <p class="tariff-tagline">Флагман для 4K/8K, киберспорта и стриминга без компромиссов</p>
+                <div class="tariff-speed"><span>500</span> Мбит/с</div>
+                <div class="tariff-meter meter-100"></div>
+                <div class="tariff-chips">
+                  <span class="chip">4K/8K</span>
+                  <span class="chip">Гейминг</span>
+                  <span class="chip">Стриминг</span>
+                </div>
+                <div class="tariff-price" data-price>
+                  <span class="price-value" data-price-value>45.00</span>
+                  <span class="price-currency">руб./мес.</span>
+                </div>
+                <div class="bundle-extras" data-tv-extra hidden>
+                  <div class="bundle-extra__chips">
+                    <span class="chip chip-soft">4 приставки</span>
+                    <span class="chip chip-soft">150+ каналов</span>
+                    <span class="chip chip-soft">Киберспорт</span>
+                    <span class="chip chip-soft">8K Ready</span>
+                  </div>
+                </div>
+                <div class="tariff-actions">
+                  <label class="bundle-toggle">
+                    <input type="checkbox" data-bundle-toggle>
+                    <span class="bundle-toggle__rail"></span>
+                    <span class="bundle-toggle__label">Добавить ТВ</span>
+                  </label>
+                  <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+                </div>
+              </article>
+
+              <article class="tariff-card tariff-card--entry" data-plan="turbo">
+                <div class="tariff-head">
+                  <span class="tariff-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 8.82a15 15 0 0 1 20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12.859a10 10 0 0 1 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <h3 class="tariff-title">Турбо</h3>
+                </div>
+                <p class="tariff-tagline">Для базовых задач и одного-двух устройств без переплат</p>
+                <div class="tariff-speed"><span>100</span> Мбит/с</div>
+                <div class="tariff-meter meter-20"></div>
+                <div class="tariff-chips">
+                  <span class="chip">HD</span>
+                  <span class="chip">Мессенджеры</span>
+                  <span class="chip">Браузинг</span>
+                </div>
+                <div class="tariff-price" data-price>
+                  <span class="price-value" data-price-value>20.00</span>
+                  <span class="price-currency">руб./мес.</span>
+                </div>
+                <div class="bundle-extras" data-tv-extra hidden>
+                  <div class="bundle-extra__chips">
+                    <span class="chip chip-soft">Базовый пакет</span>
+                    <span class="chip chip-soft">До 80 каналов</span>
+                    <span class="chip chip-soft">Без доп. опций</span>
+                  </div>
+                </div>
+                <div class="tariff-actions">
+                  <label class="bundle-toggle">
+                    <input type="checkbox" data-bundle-toggle>
+                    <span class="bundle-toggle__rail"></span>
+                    <span class="bundle-toggle__label">Добавить ТВ</span>
+                  </label>
+                  <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+                </div>
+              </article>
+              </div>
+            </div>
+            <div class="pricing-layout__aside" data-pricing-arrow>
+              <a class="pricing-all-link" href="tariffs/">
+              <span class="pricing-all-link__icon" aria-hidden="true">
+                <span class="arrow-right">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <span class="pricing-all-link__label">Все тарифы</span>
               </span>
-              <div class="tariff-head">
-                <span class="tariff-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </span>
-                <h3 class="tariff-title">Социальный</h3>
-              </div>
-              <p class="tariff-tagline">Базовые задачи, мессенджеры и госуслуги</p>
-              <div class="tariff-speed"><span>10</span> Мбит/с</div>
-              <div class="tariff-meter meter-10"></div>
-              <div class="tariff-chips">
-                <span class="chip">Сёрфинг</span>
-                <span class="chip">Почта</span>
-                <span class="chip">Мессенджеры</span>
-              </div>
-              <div class="tariff-price" data-price>
-                <span class="price-value" data-price-value>13.00</span>
-                <span class="price-currency">руб./мес.</span>
-              </div>
-              <div class="bundle-extras bundle-extras--disabled" data-tv-extra hidden></div>
-              <div class="tariff-actions">
-                <label class="bundle-toggle is-disabled">
-                  <input type="checkbox" data-bundle-toggle disabled>
-                  <span class="bundle-toggle__rail"></span>
-                  <span class="bundle-toggle__label">Добавить ТВ</span>
-                </label>
-                <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
-              </div>
-            </article>
+              </a>
+            </div>
+          </div>
+
+          <div class="pricing-all-mobile" data-pricing-mobile-cta>
+            <a class="btn btn-secondary btn-all-tariffs" href="tariffs/">Все тарифы</a>
           </div>
 
           <div class="antivirus-grid" data-antivirus-grid hidden>
