@@ -25,35 +25,89 @@ document.addEventListener('DOMContentLoaded', () => {
     mega500: { internet: '45.00', diff: '7.00' }
   };
 
+  function animatePrice(element, startPrice, endPrice, duration = 800) {
+    const startTime = performance.now();
+    const start = parseFloat(startPrice);
+    const end = parseFloat(endPrice);
+    
+    function updatePrice(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Используем easing функцию для плавности
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentPrice = start + (end - start) * easeOutQuart;
+      
+      element.textContent = currentPrice.toFixed(2);
+      
+      if (progress < 1) {
+        requestAnimationFrame(updatePrice);
+      }
+    }
+    
+    requestAnimationFrame(updatePrice);
+  }
+
   function applyBaseState(card, planPrice) {
     const priceValue = card.querySelector('[data-price-value]');
-    const switchInput = card.querySelector('[data-bundle-toggle]');
+    const tvToggle = card.querySelector('[data-bundle-toggle]');
+    const tvPlusToggle = card.querySelector('[data-bundle-toggle-plus]');
     const tvExtra = card.querySelector('[data-tv-extra]');
+    const tvPlusExtra = card.querySelector('[data-tv-plus-extra]');
     const cta = card.querySelector('[data-cta]');
 
-    if (!priceValue || !switchInput || !tvExtra || !cta || !planPrice) return;
+    if (!priceValue || !tvToggle || !tvExtra || !cta || !planPrice) return;
 
-    priceValue.textContent = planPrice.internet;
+    // Анимируем возврат к базовой цене
+    const currentPrice = priceValue.textContent;
+    animatePrice(priceValue, currentPrice, planPrice.internet);
     tvExtra.hidden = true;
-    switchInput.checked = false;
-    switchInput.disabled = planPrice.diff === null;
+    if (tvPlusExtra) tvPlusExtra.hidden = true;
+    tvToggle.checked = false;
+    tvToggle.disabled = planPrice.diff === null;
+    if (tvPlusToggle) {
+      tvPlusToggle.checked = false;
+      tvPlusToggle.disabled = planPrice.diff === null;
+    }
     cta.textContent = 'Выбрать тариф';
   }
 
   function activateBundleState(card, planPrice) {
     const switchInput = card.querySelector('[data-bundle-toggle]');
     const tvExtra = card.querySelector('[data-tv-extra]');
+    const tvPlusExtra = card.querySelector('[data-tv-plus-extra]');
     const cta = card.querySelector('[data-cta]');
     const priceValue = card.querySelector('[data-price-value]');
 
     if (!switchInput || !tvExtra || !cta || !priceValue || !planPrice || !planPrice.diff) return;
 
     tvExtra.hidden = false;
+    if (tvPlusExtra) tvPlusExtra.hidden = true;
     switchInput.checked = true;
     switchInput.disabled = false;
     const totalPrice = (parseFloat(planPrice.internet) + parseFloat(planPrice.diff)).toFixed(2);
-    priceValue.textContent = totalPrice;
+    animatePrice(priceValue, planPrice.internet, totalPrice);
     cta.textContent = 'Выбрать интернет + ТВ';
+  }
+
+  function activateBundleStatePlus(card, planPrice) {
+    const tvPlusToggle = card.querySelector('[data-bundle-toggle-plus]');
+    const tvExtra = card.querySelector('[data-tv-extra]');
+    const tvPlusExtra = card.querySelector('[data-tv-plus-extra]');
+    const cta = card.querySelector('[data-cta]');
+    const priceValue = card.querySelector('[data-price-value]');
+
+    if (!tvPlusToggle || !tvPlusExtra || !cta || !priceValue || !planPrice || !planPrice.diff) return;
+
+    tvExtra.hidden = true;
+    tvPlusExtra.hidden = false;
+    tvPlusToggle.checked = true;
+    tvPlusToggle.disabled = false;
+    // Для ТВ+ добавляем больше к цене (например, +10 вместо +7)
+    const tvPlusPrice = parseFloat(planPrice.diff) + 3; // +3 руб за ТВ+
+    const totalPrice = (parseFloat(planPrice.internet) + tvPlusPrice).toFixed(2);
+    animatePrice(priceValue, planPrice.internet, totalPrice);
+    cta.textContent = 'Выбрать интернет + ТВ+';
   }
 
   function setMode(mode) {
@@ -95,24 +149,33 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pricingGrid.classList.contains('is-hidden')) return;
 
     const input = event.target;
-    if (!input.matches('[data-bundle-toggle]')) return;
+    if (!input.matches('[data-bundle-toggle]') && !input.matches('[data-bundle-toggle-plus]')) return;
 
-    const shouldEnable = input.checked;
+    const card = input.closest('[data-plan]');
+    if (!card) return;
 
-    pricingGrid.querySelectorAll('[data-plan]').forEach((card) => {
-      const plan = card.getAttribute('data-plan');
-      const planPrice = PRICE_MAP[plan];
-      if (!planPrice) return;
+    const plan = card.getAttribute('data-plan');
+    const planPrice = PRICE_MAP[plan];
+    if (!planPrice) return;
 
-      const cardInput = card.querySelector('[data-bundle-toggle]');
-      if (!cardInput || cardInput.disabled) return;
 
-      if (shouldEnable) {
-        activateBundleState(card, planPrice);
-      } else {
-        applyBaseState(card, planPrice);
-      }
-    });
+    const tvToggle = card.querySelector('[data-bundle-toggle]');
+    const tvPlusToggle = card.querySelector('[data-bundle-toggle-plus]');
+
+    // Если включили ТВ, выключаем ТВ+ и активируем ТВ
+    if (input.matches('[data-bundle-toggle]') && input.checked) {
+      if (tvPlusToggle) tvPlusToggle.checked = false;
+      activateBundleState(card, planPrice);
+    }
+    // Если включили ТВ+, выключаем ТВ и активируем ТВ+
+    else if (input.matches('[data-bundle-toggle-plus]') && input.checked) {
+      if (tvToggle) tvToggle.checked = false;
+      activateBundleStatePlus(card, planPrice);
+    }
+    // Если выключили любой переключатель, возвращаем к базовому состоянию
+    else if (!input.checked) {
+      applyBaseState(card, planPrice);
+    }
   });
 
   setMode('internet');

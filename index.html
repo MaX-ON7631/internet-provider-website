@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/facts.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <!-- JavaScript Modules -->
     <script defer src="js/tabs.js"></script>
     <script defer src="js/audience-toggle.js"></script>
@@ -29,8 +31,9 @@
     <script defer src="js/city-switcher.js"></script>
     <script defer src="js/mobile-menu.js"></script>
     <script defer src="js/carousel.js"></script>
-    <script defer src="js/bundle-toggle.js"></script>
+    <script defer src="js/bundle-toggle.js?v=6"></script>
     <script defer src="js/header-scroll.js"></script>
+    <script defer src="js/facts.js"></script>
   </head>
   <body data-audience="private">
     <header class="site-header">
@@ -65,8 +68,8 @@
             </div>
           </div>
           <div class="audience-toggle audience-toggle--desktop" role="group" aria-label="Выбор аудитории" data-audience-toggle="desktop">
-            <button type="button" class="audience-btn" data-audience="private" aria-pressed="true">Физ. лица</button>
-            <button type="button" class="audience-btn" data-audience="business" aria-pressed="false">Бизнес</button>
+            <button type="button" class="audience-btn" data-audience="private" aria-pressed="true">Для Дома</button>
+            <button type="button" class="audience-btn" data-audience="business" aria-pressed="false">Для Бизнеса</button>
           </div>
           <a class="btn btn-primary desktop-user-btn" href="#">Личный кабинет</a>
         </div>
@@ -178,7 +181,7 @@
                   <div class="carousel-progress" data-carousel-progress></div>
                   <span class="hero-slide__brand">Telegram</span>
                   <h2>Управляйте услугами прямо из Telegram</h2>
-                  <p>Поддержка стала ещё ближе — теперь вы можете управлять услугами прямо в Telegram! Проверяйте баланс, заходите в личный кабинет, обращайтесь в техподдержку — всё в одном удобном боте</p>
+                  <p>Поддержка стала ещё ближе — теперь вы можете управлять услугами прямо в Telegram! Пополняйте баланс, заходите в личный кабинет, обращайтесь в техподдержку — всё в одном удобном боте</p>
                   <a class="btn btn-hero" href="#news">Подробнее</a>
                 </div>
               </article>
@@ -219,7 +222,18 @@
       </section>
 
       <section class="audience-section" aria-labelledby="audience-home">
-        <div class="audience-section__panel audience-section__panel--home">
+        <div class="container">
+          <div class="audience-section__header">
+            <h2 class="audience-section__title">
+              Быстрый и надежный<br>
+              интернет для<br>
+              <span class="highlight">вашего успеха</span>
+            </h2>
+            <p class="audience-section__subtitle">Современные решения для дома и бизнеса. Стабильное соединение, высокая скорость и профессиональная поддержка 24/7.</p>
+          </div>
+        </div>
+        <div class="audience-section__panels">
+          <div class="audience-section__panel audience-section__panel--home">
           <div class="audience-section__content">
             <div class="audience-section__head">
               <span class="audience-section__label" id="audience-home">Для дома</span>
@@ -244,67 +258,34 @@
               <a class="btn btn-outline audience-section__cta audience-section__cta--ghost" href="#contacts">Оставить заявку</a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="news" class="news">
-        <div class="container news-inner">
-          <header class="news-header">
-            <h2 class="news-title">Новости</h2>
-            <p class="news-subtitle">Последние обновления компании и предложения для абонентов.</p>
-          </header>
-          <ul class="news-list">
-            <li>
-              <a class="news-item" href="news/domashniy-plus.html">
-                <div class="news-item__meta">
-                  <time datetime="2025-10-10">10 октября 2025</time>
-                </div>
-                <div class="news-item__content">
-                  <h3 class="news-item__title">Теперь можно пополнить баланс через Telegram-бота</h3>
-                  <span class="news-item__arrow" aria-hidden="true">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="news-item" href="news/gomel-expansion.html">
-                <div class="news-item__meta">
-                  <time datetime="2025-10-05">5 октября 2025</time>
-                </div>
-                <div class="news-item__content">
-                  <h3 class="news-item__title">Расширяем покрытие в Минске</h3>
-                  <span class="news-item__arrow" aria-hidden="true">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="news-item" href="news/speed-upgrade.html">
-                <div class="news-item__meta">
-                  <time datetime="2025-09-28">28 сентября 2025</time>
-                </div>
-                <div class="news-item__content">
-                  <h3 class="news-item__title">Тариф «Социальный» стал ещё доступнее</h3>
-                  <span class="news-item__arrow" aria-hidden="true">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="news-footer">
-            <a class="btn btn-primary news-view-all" href="news/">Смотреть все</a>
           </div>
         </div>
       </section>
+
+      <section id="about" class="about">
+        <div class="container about-inner">
+          <div class="about-head">
+            <h2>Информация о компании</h2>
+          </div>
+          <div class="about-layout">
+            <div class="about-content">
+              <p class="about-lead">Компания "АйПи ТелКом" была создана в 2001 г. как Интернет-провайдер. В дальнейшем наши направления деятельности постепенно дополнялись и расширялись. Неизменны лишь два основных принципа нашей работы — мы используем объективный индивидуальный подход к каждому клиенту и беремся за задачи, которые выполним в срок с ожидаемым результатом.</p>
+              
+              <div class="about-services">
+                <h3 class="about-services-title">К настоящему моменту мы:</h3>
+                <ul class="about-services-list">
+                  <li>подключаем к Интернету по технологии Ethernet и GPON в Минске и Гомеле;</li>
+                  <li>предоставляем услуги телефонии, IP-телевидения, хостинга, и другие сопутствующие услуги электросвязи;</li>
+                  <li>обслуживаем компьютеры, серверы и локальные сети предприятий;</li>
+                  <li>строим компьютерные сети по технологии GPON, Ethernet, прокладываем оптоволокно.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
 
       <section id="services" class="services">
         <div class="container">
@@ -352,9 +333,14 @@
                 </div>
                 <div class="bundle-extras" data-tv-extra hidden>
                   <div class="bundle-extra__chips">
-                    <span class="chip chip-soft">130+ каналов</span>
-                    <span class="chip chip-soft">Кинотека</span>
-                    <span class="chip chip-soft">Профиль для семьи</span>
+                    <span class="chip chip-soft">Базовый пакет</span>
+                    <span class="chip chip-soft">До 80 каналов</span>
+                  </div>
+                </div>
+                <div class="bundle-extras" data-tv-plus-extra hidden>
+                  <div class="bundle-extra__chips">
+                    <span class="chip chip-soft">Расширенный пакет</span>
+                    <span class="chip chip-soft">150+ каналов</span>
                   </div>
                 </div>
                 <div class="tariff-actions">
@@ -362,6 +348,11 @@
                     <input type="checkbox" data-bundle-toggle>
                     <span class="bundle-toggle__rail"></span>
                     <span class="bundle-toggle__label">Добавить ТВ</span>
+                  </label>
+                  <label class="bundle-toggle">
+                    <input type="checkbox" data-bundle-toggle-plus>
+                    <span class="bundle-toggle__rail"></span>
+                    <span class="bundle-toggle__label">Добавить ТВ+</span>
                   </label>
                   <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
                 </div>
@@ -389,10 +380,14 @@
                 </div>
                 <div class="bundle-extras" data-tv-extra hidden>
                   <div class="bundle-extra__chips">
-                    <span class="chip chip-soft">4 приставки</span>
+                    <span class="chip chip-soft">Базовый пакет</span>
+                    <span class="chip chip-soft">До 80 каналов</span>
+                  </div>
+                </div>
+                <div class="bundle-extras" data-tv-plus-extra hidden>
+                  <div class="bundle-extra__chips">
+                    <span class="chip chip-soft">Расширенный пакет</span>
                     <span class="chip chip-soft">150+ каналов</span>
-                    <span class="chip chip-soft">Киберспорт</span>
-                    <span class="chip chip-soft">8K Ready</span>
                   </div>
                 </div>
                 <div class="tariff-actions">
@@ -400,6 +395,11 @@
                     <input type="checkbox" data-bundle-toggle>
                     <span class="bundle-toggle__rail"></span>
                     <span class="bundle-toggle__label">Добавить ТВ</span>
+                  </label>
+                  <label class="bundle-toggle">
+                    <input type="checkbox" data-bundle-toggle-plus>
+                    <span class="bundle-toggle__rail"></span>
+                    <span class="bundle-toggle__label">Добавить ТВ+</span>
                   </label>
                   <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
                 </div>
@@ -410,7 +410,7 @@
                   <span class="tariff-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 8.82a15 15 0 0 1 20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12.859a10 10 0 0 1 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <h3 class="tariff-title">Турбо</h3>
+                  <h3 class="tariff-title">Турбо 100</h3>
                 </div>
                 <p class="tariff-tagline">Для базовых задач и одного-двух устройств без переплат</p>
                 <div class="tariff-speed"><span>100</span> Мбит/с</div>
@@ -428,7 +428,12 @@
                   <div class="bundle-extra__chips">
                     <span class="chip chip-soft">Базовый пакет</span>
                     <span class="chip chip-soft">До 80 каналов</span>
-                    <span class="chip chip-soft">Без доп. опций</span>
+                  </div>
+                </div>
+                <div class="bundle-extras" data-tv-plus-extra hidden>
+                  <div class="bundle-extra__chips">
+                    <span class="chip chip-soft">Расширенный пакет</span>
+                    <span class="chip chip-soft">150+ каналов</span>
                   </div>
                 </div>
                 <div class="tariff-actions">
@@ -436,6 +441,11 @@
                     <input type="checkbox" data-bundle-toggle>
                     <span class="bundle-toggle__rail"></span>
                     <span class="bundle-toggle__label">Добавить ТВ</span>
+                  </label>
+                  <label class="bundle-toggle">
+                    <input type="checkbox" data-bundle-toggle-plus>
+                    <span class="bundle-toggle__rail"></span>
+                    <span class="bundle-toggle__label">Добавить ТВ+</span>
                   </label>
                   <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
                 </div>
@@ -560,29 +570,64 @@
           </section>
         </div>
       </section>
-
-      <section id="about" class="about">
-        <div class="container about-inner">
-          <div class="about-head">
-            <h2>Информация о компании</h2>
-          </div>
-          <div class="about-layout">
-            <div class="about-intro">
-              <p class="about-lead">Компания “АйПи ТелКом” была создана в 2001 г. как Интернет-провайдер. В дальнейшем наши направления деятельности постепенно дополнялись и расширялись. Неизменны лишь два основных принципа нашей работы — мы используем объективный индивидуальный подход к каждому клиенту и беремся за задачи, которые выполним в срок с ожидаемым результатом.</p>
-            </div>
-            <div class="about-intro">
-              <p>К настоящему моменту мы:</p>
-              <ul>
-                <li>подключаем к Интернету по технологии Ethernet и GPON в Минске и Гомеле;</li>
-                <li>предоставляем услуги телефонии, IP-телевидения, хостинга, и другие сопутствующие услуги электросвязи;</li>
-                <li>обслуживаем компьютеры, серверы и локальные сети предприятий;</li>
-                <li>строим компьютерные сети по технологии GPON, Ethernet, прокладываем оптоволокно.</li>
-              </ul>
-            </div>
+      <section id="news" class="news">
+        <div class="container news-inner">
+          <header class="news-header">
+            <h2 class="news-title">Новости</h2>
+            <p class="news-subtitle">Последние обновления компании и предложения для абонентов.</p>
+          </header>
+          <ul class="news-list">
+            <li>
+              <a class="news-item" href="news/domashniy-plus.html">
+                <div class="news-item__meta">
+                  <time datetime="2025-10-10">10 октября 2025</time>
+                </div>
+                <div class="news-item__content">
+                  <h3 class="news-item__title">Теперь можно пополнить баланс через Telegram-бота</h3>
+                  <span class="news-item__arrow" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="news/gomel-expansion.html">
+                <div class="news-item__meta">
+                  <time datetime="2025-10-05">5 октября 2025</time>
+                </div>
+                <div class="news-item__content">
+                  <h3 class="news-item__title">Расширяем покрытие в Минске</h3>
+                  <span class="news-item__arrow" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="news/speed-upgrade.html">
+                <div class="news-item__meta">
+                  <time datetime="2025-09-28">28 сентября 2025</time>
+                </div>
+                <div class="news-item__content">
+                  <h3 class="news-item__title">Тариф «Социальный» стал ещё доступнее</h3>
+                  <span class="news-item__arrow" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="news-footer">
+            <a class="btn btn-primary news-view-all" href="news/">Смотреть все</a>
           </div>
         </div>
       </section>
-
     </main>
 
     <footer id="contacts" class="site-footer site-footer--dark">
