@@ -18,12 +18,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS Modules -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/facts.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/base.css?v=7" />
+    <link rel="stylesheet" href="css/layout.css?v=7" />
+    <link rel="stylesheet" href="css/components.css?v=7" />
+    <link rel="stylesheet" href="css/responsive.css?v=7" />
+    <link rel="stylesheet" href="css/facts.css?v=7" />
+    <link rel="stylesheet" href="css/animations.css?v=7" />
     <!-- JavaScript Modules -->
     <script defer src="js/tabs.js"></script>
     <script defer src="js/audience-toggle.js"></script>
@@ -36,6 +36,16 @@
     <script defer src="js/facts.js"></script>
   </head>
   <body data-audience="private">
+    <!-- Video Background -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="video/background.mp4.mp4" type="video/mp4">
+        <!-- Fallback для браузеров без поддержки видео -->
+        <div class="video-fallback"></div>
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    
     <header class="site-header">
       <div class="container header-inner">
         <!-- Logo -->
@@ -266,20 +276,53 @@
         <div class="container about-inner">
           <div class="about-head">
             <h2>Информация о компании</h2>
+            <p class="about-subtitle">Компания "АйПи ТелКом" была создана в 2001 г. как Интернет-провайдер. В дальнейшем наши направления деятельности постепенно дополнялись и расширялись.</p>
           </div>
-          <div class="about-layout">
-            <div class="about-content">
-              <p class="about-lead">Компания "АйПи ТелКом" была создана в 2001 г. как Интернет-провайдер. В дальнейшем наши направления деятельности постепенно дополнялись и расширялись. Неизменны лишь два основных принципа нашей работы — мы используем объективный индивидуальный подход к каждому клиенту и беремся за задачи, которые выполним в срок с ожидаемым результатом.</p>
-              
-              <div class="about-services">
-                <h3 class="about-services-title">К настоящему моменту мы:</h3>
-                <ul class="about-services-list">
-                  <li>подключаем к Интернету по технологии Ethernet и GPON в Минске и Гомеле;</li>
-                  <li>предоставляем услуги телефонии, IP-телевидения, хостинга, и другие сопутствующие услуги электросвязи;</li>
-                  <li>обслуживаем компьютеры, серверы и локальные сети предприятий;</li>
-                  <li>строим компьютерные сети по технологии GPON, Ethernet, прокладываем оптоволокно.</li>
-                </ul>
+          
+          <div class="timeline">
+            <div class="timeline-item timeline-item--left">
+              <div class="timeline-content">
+                <h3 class="timeline-title">Основание компании | IPTelcom</h3>
+                <p class="timeline-location">Беларусь, Минск</p>
+                <p class="timeline-description">Интернет-провайдер с индивидуальным подходом к каждому клиенту</p>
               </div>
+              <div class="timeline-date">2001</div>
+            </div>
+
+            <div class="timeline-item timeline-item--right">
+              <div class="timeline-content">
+                <h3 class="timeline-title">Расширение услуг | IPTelcom</h3>
+                <p class="timeline-location">Беларусь, Минск</p>
+                <p class="timeline-description">Добавление услуг телефонии и IP-телевидения</p>
+              </div>
+              <div class="timeline-date">2005-2010</div>
+            </div>
+
+            <div class="timeline-item timeline-item--left">
+              <div class="timeline-content">
+                <h3 class="timeline-title">Технологическое развитие | IPTelcom</h3>
+                <p class="timeline-location">Беларусь, Минск</p>
+                <p class="timeline-description">Внедрение технологий Ethernet и GPON</p>
+              </div>
+              <div class="timeline-date">2010-2015</div>
+            </div>
+
+            <div class="timeline-item timeline-item--right">
+              <div class="timeline-content">
+                <h3 class="timeline-title">Корпоративные услуги | IPTelcom</h3>
+                <p class="timeline-location">Беларусь, Минск</p>
+                <p class="timeline-description">Обслуживание серверов и локальных сетей предприятий</p>
+              </div>
+              <div class="timeline-date">2015-2020</div>
+            </div>
+
+            <div class="timeline-item timeline-item--left">
+              <div class="timeline-content">
+                <h3 class="timeline-title">Современные решения | IPTelcom</h3>
+                <p class="timeline-location">Беларусь, Минск и Гомель</p>
+                <p class="timeline-description">Строительство компьютерных сетей и прокладка оптоволокна</p>
+              </div>
+              <div class="timeline-date">2020 - настоящее время</div>
             </div>
           </div>
         </div>

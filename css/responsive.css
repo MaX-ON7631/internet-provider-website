@@ -12,7 +12,7 @@
     height: 380px;
   }
   .carousel-hero {
-    padding: 110px 0 44px;
+    padding: 0;
   }
   .audience-section__panel {
     padding: clamp(32px, 6vw, 64px);
@@ -77,6 +77,15 @@
   /* Hero adjustments */
   .hero {
     padding: 80px 0 48px;
+    background: linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.1) 0%,
+      rgba(59, 130, 246, 0.07) 25%,
+      rgba(15, 23, 42, 0.03) 50%,
+      rgba(37, 99, 235, 0.08) 75%,
+      rgba(59, 130, 246, 0.05) 100%
+    );
+    backdrop-filter: blur(12px);
   }
   .hero h1 {
     font-size: 48px;
@@ -98,7 +107,7 @@
     min-width: 160px;
   }
   .carousel-hero {
-    padding: 100px 0 40px;
+    padding: 0;
   }
   .hero-slide {
     padding: 56px 48px;
@@ -212,6 +221,15 @@
   /* Hero */
   .hero {
     padding: 64px 0 40px;
+    background: linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.12) 0%,
+      rgba(59, 130, 246, 0.08) 25%,
+      rgba(15, 23, 42, 0.05) 50%,
+      rgba(37, 99, 235, 0.1) 75%,
+      rgba(59, 130, 246, 0.06) 100%
+    );
+    backdrop-filter: blur(15px);
   }
   .hero h1 {
     font-size: 40px;
@@ -243,7 +261,7 @@
     min-width: auto;
   }
   .carousel-hero {
-    padding: 88px 0 36px;
+    padding: 0;
   }
   .carousel-hero .carousel-track {
     padding: 0 32px;
@@ -590,7 +608,7 @@
     height: 260px;
   }
   .carousel-hero {
-    padding: 76px 0 32px;
+    padding: 0;
   }
   .carousel-hero .carousel-track {
     padding: 0 24px;

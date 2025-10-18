@@ -3,6 +3,44 @@
   const carousels = document.querySelectorAll('[data-carousel]');
   if (!carousels.length) return;
 
+  // Video background optimization
+  const videoBackground = document.querySelector('.video-background video');
+  if (videoBackground) {
+    let videoPauseTimer = null;
+    
+    // Pause video when user is inactive
+    function pauseVideoOnInactivity() {
+      if (videoPauseTimer) clearTimeout(videoPauseTimer);
+      
+      videoPauseTimer = setTimeout(() => {
+        if (!videoBackground.paused) {
+          videoBackground.pause();
+        }
+      }, 30000); // Pause after 30 seconds of inactivity
+    }
+    
+    // Resume video on user interaction
+    function resumeVideoOnActivity() {
+      if (videoPauseTimer) clearTimeout(videoPauseTimer);
+      
+      if (videoBackground.paused) {
+        videoBackground.play().catch(() => {
+          // Ignore autoplay restrictions
+        });
+      }
+      
+      pauseVideoOnInactivity();
+    }
+    
+    // Listen for user activity
+    ['mousemove', 'mousedown', 'keypress', 'scroll', 'touchstart'].forEach(event => {
+      document.addEventListener(event, resumeVideoOnActivity, { passive: true });
+    });
+    
+    // Initial setup
+    pauseVideoOnInactivity();
+  }
+
   carousels.forEach((root) => initCarousel(root));
 
   function initCarousel(root) {
