@@ -339,8 +339,8 @@
 
           <div class="bundle-switch-wrapper">
             <div class="bundle-switch">
-              <button class="bundle-switch__btn is-active" data-bundle-mode="internet">Интернет</button>
-              <button class="bundle-switch__btn" data-bundle-mode="antivirus">Антивирус</button>
+              <button class="bundle-switch__btn bundle-switch__btn--internet is-active" data-bundle-mode="internet">Интернет</button>
+              <button class="bundle-switch__btn bundle-switch__btn--antivirus" data-bundle-mode="antivirus">Антивирус</button>
               <button class="bundle-switch__btn bundle-switch__btn--mts" data-bundle-mode="mts" aria-label="Специальное предложение МТС и АйПи ТелКом">
                 <span class="bundle-switch__btn-title">
                   МТС × <span class="bundle-switch__btn-ip">IP</span><span class="bundle-switch__btn-telcom">Telcom</span>
@@ -354,22 +354,17 @@
             <div class="pricing-layout__spacer" aria-hidden="true"></div>
             <div class="pricing-grid-holder">
               <div class="pricing-grid" data-pricing-grid>
-              <article class="tariff-card tariff-card--popular" data-plan="mega200">
-                <div class="tariff-badge">Хит продаж</div>
+              <article class="tariff-card tariff-card--popular tariff-card--hit" data-plan="mega200">
+                <div class="tariff-badge tariff-badge--popular">Хит продаж</div>
                 <div class="tariff-head">
-                  <span class="tariff-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M10 9l6 3-6 3V9Z" fill="currentColor"/></svg>
-                  </span>
-                  <h3 class="tariff-title">Мега 200</h3>
+                  <h3 class="tariff-title">
+                    <span class="tariff-prefix" data-smart-prefix hidden>SMART</span>
+                    <span class="tariff-name">Мега 200</span>
+                  </h3>
                 </div>
-                <p class="tariff-tagline">Сбалансированный тариф для семьи, стриминга и учёбы</p>
+                <p class="tariff-description">Для тех, кто знает толк в хорошем интернете</p>
                 <div class="tariff-speed"><span>200</span> Мбит/с</div>
                 <div class="tariff-meter meter-40"></div>
-                <div class="tariff-chips">
-                  <span class="chip">Full HD</span>
-                  <span class="chip">Стриминг</span>
-                  <span class="chip">Облака</span>
-                </div>
                 <div class="tariff-price" data-price>
                   <span class="price-value" data-price-value>30.00</span>
                   <span class="price-currency">руб./мес.</span>
@@ -397,26 +392,21 @@
                     <span class="bundle-toggle__rail"></span>
                     <span class="bundle-toggle__label">Добавить ТВ+</span>
                   </label>
-                  <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+                  <a class="btn btn-primary" href="#contacts" data-cta data-cta-text="Выбрать тариф">Выбрать тариф</a>
                 </div>
               </article>
 
               <article class="tariff-card tariff-featured tariff-card--flagship" data-plan="mega500">
                 <div class="tariff-badge">Лучший выбор</div>
                 <div class="tariff-head">
-                  <span class="tariff-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                  </span>
-                  <h3 class="tariff-title">Мега 500</h3>
+                  <h3 class="tariff-title">
+                    <span class="tariff-prefix" data-smart-prefix hidden>SMART</span>
+                    <span class="tariff-name">Мега 500</span>
+                  </h3>
                 </div>
-                <p class="tariff-tagline">Флагман для 4K/8K, киберспорта и стриминга без компромиссов</p>
+                <p class="tariff-description">Когда нужно скачать весь интернет за минуту</p>
                 <div class="tariff-speed"><span>500</span> Мбит/с</div>
                 <div class="tariff-meter meter-100"></div>
-                <div class="tariff-chips">
-                  <span class="chip">4K/8K</span>
-                  <span class="chip">Гейминг</span>
-                  <span class="chip">Стриминг</span>
-                </div>
                 <div class="tariff-price" data-price>
                   <span class="price-value" data-price-value>45.00</span>
                   <span class="price-currency">руб./мес.</span>
@@ -444,25 +434,21 @@
                     <span class="bundle-toggle__rail"></span>
                     <span class="bundle-toggle__label">Добавить ТВ+</span>
                   </label>
-                  <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+                  <a class="btn btn-primary" href="#contacts" data-cta data-cta-text="Выбрать тариф">Выбрать тариф</a>
                 </div>
               </article>
 
-              <article class="tariff-card tariff-card--entry" data-plan="turbo">
+              <article class="tariff-card tariff-card--entry tariff-card--budget" data-plan="turbo">
+                <div class="tariff-badge">Эконом</div>
                 <div class="tariff-head">
-                  <span class="tariff-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 8.82a15 15 0 0 1 20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12.859a10 10 0 0 1 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                  <h3 class="tariff-title">Турбо 100</h3>
+                  <h3 class="tariff-title">
+                    <span class="tariff-prefix" data-smart-prefix hidden>SMART</span>
+                    <span class="tariff-name">Турбо 100</span>
+                  </h3>
                 </div>
-                <p class="tariff-tagline">Для базовых задач и одного-двух устройств без переплат</p>
+                <p class="tariff-description">Идеален для чтения новостей и размышлений о жизни</p>
                 <div class="tariff-speed"><span>100</span> Мбит/с</div>
                 <div class="tariff-meter meter-20"></div>
-                <div class="tariff-chips">
-                  <span class="chip">HD</span>
-                  <span class="chip">Мессенджеры</span>
-                  <span class="chip">Браузинг</span>
-                </div>
                 <div class="tariff-price" data-price>
                   <span class="price-value" data-price-value>20.00</span>
                   <span class="price-currency">руб./мес.</span>
@@ -490,7 +476,7 @@
                     <span class="bundle-toggle__rail"></span>
                     <span class="bundle-toggle__label">Добавить ТВ+</span>
                   </label>
-                  <a class="btn btn-primary" href="#contacts" data-cta>Выбрать тариф</a>
+                  <a class="btn btn-primary" href="#contacts" data-cta data-cta-text="Выбрать тариф">Выбрать тариф</a>
                 </div>
               </article>
               </div>
@@ -514,54 +500,60 @@
           </div>
 
           <div class="antivirus-grid" data-antivirus-grid hidden>
-            <article class="antivirus-card">
-              <div class="antivirus-head">
-                <span class="antivirus-chip">KAV</span>
-                <h3>Kaspersky Anti-Virus</h3>
-              </div>
-              <p class="antivirus-text">Базовая защита компьютера: антивирус автоматически сканирует систему и помогает быстро нейтрализовать угрозы.</p>
-              <ul class="antivirus-list">
-                <li>Автосканирование и блокировка вирусов</li>
-                <li>Удаление вредоносных программ без потери данных</li>
-                <li>Поддержание стабильной работы устройства</li>
-              </ul>
-              <div class="antivirus-actions">
-                <a class="btn btn-primary" href="#contacts">Узнать цену</a>
-                <a class="antivirus-link" href="https://www.kaspersky.ru/antivirus" target="_blank" rel="noopener">Подробнее</a>
-              </div>
-            </article>
-
-            <article class="antivirus-card">
-              <div class="antivirus-head">
-                <span class="antivirus-chip">KIS</span>
-                <h3>Kaspersky Internet Security</h3>
-              </div>
-              <p class="antivirus-text">Комплексная защита для всей цифровой жизни: безопасные платежи, приватность и защита от современных угроз.</p>
-              <ul class="antivirus-list">
-                <li>Щит от вирусов, шифровальщиков и фишинга</li>
-                <li>Защита личных данных и общения</li>
-                <li>Безопасные онлайн-покупки и банки</li>
-              </ul>
-              <div class="antivirus-actions">
-                <a class="btn btn-primary" href="#contacts">Узнать цену</a>
-                <a class="antivirus-link" href="https://www.kaspersky.ru/internet-security" target="_blank" rel="noopener">Подробнее</a>
+            <article class="antivirus-card antivirus-card--green">
+              <div class="antivirus-card__content">
+                <div class="antivirus-card__head">
+                  <span class="antivirus-card__label">KAV</span>
+                  <h3 class="antivirus-card__headline">Kaspersky Anti-Virus</h3>
+                </div>
+                <p class="antivirus-card__description">Базовая защита компьютера: антивирус автоматически сканирует систему и помогает быстро нейтрализовать угрозы.</p>
+                <ul class="antivirus-card__features">
+                  <li>Автосканирование и блокировка вирусов</li>
+                  <li>Удаление вредоносных программ без потери данных</li>
+                  <li>Поддержание стабильной работы устройства</li>
+                </ul>
+                <div class="antivirus-card__actions">
+                  <a class="btn btn-primary antivirus-card__cta" href="#contacts">Узнать цену</a>
+                  <a class="antivirus-card__cta antivirus-card__cta--ghost" href="https://www.kaspersky.ru/antivirus" target="_blank" rel="noopener">Подробнее</a>
+                </div>
               </div>
             </article>
 
-            <article class="antivirus-card">
-              <div class="antivirus-head">
-                <span class="antivirus-chip">Safe Kids</span>
-                <h3>Kaspersky Safe Kids</h3>
+            <article class="antivirus-card antivirus-card--green">
+              <div class="antivirus-card__content">
+                <div class="antivirus-card__head">
+                  <span class="antivirus-card__label">KIS</span>
+                  <h3 class="antivirus-card__headline">Kaspersky Internet Security</h3>
+                </div>
+                <p class="antivirus-card__description">Комплексная защита для всей цифровой жизни: безопасные платежи, приватность и защита от современных угроз.</p>
+                <ul class="antivirus-card__features">
+                  <li>Щит от вирусов, шифровальщиков и фишинга</li>
+                  <li>Защита личных данных и общения</li>
+                  <li>Безопасные онлайн-покупки и банки</li>
+                </ul>
+                <div class="antivirus-card__actions">
+                  <a class="btn btn-primary antivirus-card__cta" href="#contacts">Узнать цену</a>
+                  <a class="antivirus-card__cta antivirus-card__cta--ghost" href="https://www.kaspersky.ru/internet-security" target="_blank" rel="noopener">Подробнее</a>
+                </div>
               </div>
-              <p class="antivirus-text">Родительский контроль и GPS-трекер для Windows, Mac и мобильных устройств в едином решении.</p>
-              <ul class="antivirus-list">
-                <li>Гибкие правила времени у экрана</li>
-                <li>Мониторинг активности и контента</li>
-                <li>GPS-трекинг и уведомления родителям</li>
-              </ul>
-              <div class="antivirus-actions">
-                <a class="btn btn-primary" href="#contacts">Узнать цену</a>
-                <a class="antivirus-link" href="https://www.kaspersky.ru/safe-kids" target="_blank" rel="noopener">Подробнее</a>
+            </article>
+
+            <article class="antivirus-card antivirus-card--green">
+              <div class="antivirus-card__content">
+                <div class="antivirus-card__head">
+                  <span class="antivirus-card__label">Safe Kids</span>
+                  <h3 class="antivirus-card__headline">Kaspersky Safe Kids</h3>
+                </div>
+                <p class="antivirus-card__description">Родительский контроль и GPS-трекер для Windows, Mac и мобильных устройств в едином решении.</p>
+                <ul class="antivirus-card__features">
+                  <li>Гибкие правила времени у экрана</li>
+                  <li>Мониторинг активности и контента</li>
+                  <li>GPS-трекинг и уведомления родителям</li>
+                </ul>
+                <div class="antivirus-card__actions">
+                  <a class="btn btn-primary antivirus-card__cta" href="#contacts">Узнать цену</a>
+                  <a class="antivirus-card__cta antivirus-card__cta--ghost" href="https://www.kaspersky.ru/safe-kids" target="_blank" rel="noopener">Подробнее</a>
+                </div>
               </div>
             </article>
           </div>

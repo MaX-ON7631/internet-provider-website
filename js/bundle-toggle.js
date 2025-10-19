@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tvExtra = card.querySelector('[data-tv-extra]');
     const tvPlusExtra = card.querySelector('[data-tv-plus-extra]');
     const cta = card.querySelector('[data-cta]');
+    const smartPrefix = card.querySelector('[data-smart-prefix]');
 
     if (!priceValue || !tvToggle || !tvExtra || !cta || !planPrice) return;
 
@@ -70,6 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
       tvPlusToggle.disabled = planPrice.diff === null;
     }
     cta.textContent = 'Выбрать тариф';
+    
+    // Скрываем SMART префикс и возвращаем базовый текст
+    if (smartPrefix) {
+      smartPrefix.hidden = true;
+      smartPrefix.textContent = 'SMART';
+    }
   }
 
   function activateBundleState(card, planPrice) {
@@ -78,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tvPlusExtra = card.querySelector('[data-tv-plus-extra]');
     const cta = card.querySelector('[data-cta]');
     const priceValue = card.querySelector('[data-price-value]');
+    const smartPrefix = card.querySelector('[data-smart-prefix]');
 
     if (!switchInput || !tvExtra || !cta || !priceValue || !planPrice || !planPrice.diff) return;
 
@@ -87,7 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
     switchInput.disabled = false;
     const totalPrice = (parseFloat(planPrice.internet) + parseFloat(planPrice.diff)).toFixed(2);
     animatePrice(priceValue, planPrice.internet, totalPrice);
-    cta.textContent = 'Выбрать интернет + ТВ';
+    cta.textContent = 'Выбрать интернет с ТВ';
+    
+    // Показываем SMART префикс с базовым текстом
+    if (smartPrefix) {
+      smartPrefix.textContent = 'SMART';
+      smartPrefix.hidden = false;
+    }
   }
 
   function activateBundleStatePlus(card, planPrice) {
@@ -96,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tvPlusExtra = card.querySelector('[data-tv-plus-extra]');
     const cta = card.querySelector('[data-cta]');
     const priceValue = card.querySelector('[data-price-value]');
+    const smartPrefix = card.querySelector('[data-smart-prefix]');
 
     if (!tvPlusToggle || !tvPlusExtra || !cta || !priceValue || !planPrice || !planPrice.diff) return;
 
@@ -107,7 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const tvPlusPrice = parseFloat(planPrice.diff) + 3; // +3 руб за ТВ+
     const totalPrice = (parseFloat(planPrice.internet) + tvPlusPrice).toFixed(2);
     animatePrice(priceValue, planPrice.internet, totalPrice);
-    cta.textContent = 'Выбрать интернет + ТВ+';
+    cta.textContent = 'Выбрать интернет с ТВ+';
+    
+    // Показываем SMART префикс с текстом SMART+
+    if (smartPrefix) {
+      smartPrefix.textContent = 'SMART+';
+      smartPrefix.hidden = false;
+    }
   }
 
   function setMode(mode) {

@@ -1343,6 +1343,26 @@ section::after {
   font-size: 28px; 
 }
 
+/* Специальные стили для секции тарифов */
+.services .section-head h2 {
+  font-size: 28px;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.services .section-head p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
 .section-head p { 
   margin: 0; 
   color: var(--muted); 
