@@ -174,6 +174,10 @@
   .news-subtitle {
     font-size: 17px;
   }
+  
+  .news-title {
+    font-size: clamp(24px, 4vw, 28px);
+  }
   .news-item {
     padding: 20px;
     gap: 20px;
@@ -194,6 +198,11 @@
 @media (max-width: 768px) {
   .container {
     padding: 0 12px;
+  }
+  
+  .hero-carousel {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   /* Header */
@@ -282,7 +291,7 @@
 
   /* Sections */
   .section-head h2 {
-    font-size: 24px;
+    font-size: clamp(24px, 4vw, 28px);
   }
   .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -353,6 +362,36 @@
   .addon-callout .btn {
     justify-self: stretch;
   }
+  .addon-callout--premium {
+    margin-top: 32px;
+  }
+  .addon-callout__content {
+    padding: 32px 24px;
+  }
+  .addon-callout--premium .addon-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+  .addon-icon--premium {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+  }
+  .addon-callout--premium .addon-body h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .addon-features {
+    gap: 10px;
+  }
+  .addon-features li {
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .addon-features li span {
+    font-size: 13px;
+  }
   .news {
     padding: 64px 0;
   }
@@ -419,6 +458,11 @@
 @media (max-width: 640px) {
   .container {
     padding: 0 16px;
+  }
+  
+  .hero-carousel {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   /* Header */
@@ -518,11 +562,59 @@
   .hero-card h2 {
     font-size: 26px;
   }
+  
+  .hero-card__text {
+    font-size: 15px;
+  }
+  
+  .timeline-description {
+    font-size: 15px;
+  }
+  
+  .timeline-date {
+    font-size: 15px;
+  }
+  
+  .timeline-title {
+    font-size: 18px;
+  }
+  
+  .antivirus-card__headline {
+    font-size: 16px;
+  }
+  
+  .antivirus-card__description {
+    font-size: 13px;
+  }
   .hero-card__features h3 {
     font-size: 16px;
   }
   .hero-card__features p {
     font-size: 13px;
+  }
+  
+  .hero-card__text {
+    font-size: 17px;
+  }
+  
+  .timeline-description {
+    font-size: 17px;
+  }
+  
+  .timeline-date {
+    font-size: 17px;
+  }
+  
+  .timeline-title {
+    font-size: 20px;
+  }
+  
+  .antivirus-card__headline {
+    font-size: 18px;
+  }
+  
+  .antivirus-card__description {
+    font-size: 15px;
   }
   .hero-features .feature:nth-child(3) {
     grid-column: 1 / -1;
@@ -565,7 +657,7 @@
     margin-bottom: 20px;
   }
   .section-head h2 {
-    font-size: 22px;
+    font-size: clamp(20px, 4vw, 24px);
   }
   .cards {
     grid-template-columns: 1fr;
@@ -714,15 +806,57 @@
   .addon-callout .btn {
     width: 100%;
   }
+  .addon-callout--premium {
+    margin-top: 28px;
+    border-radius: 24px;
+  }
+  .addon-callout__content {
+    padding: 24px 20px;
+  }
+  .addon-callout--premium .addon-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+  .addon-icon--premium {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto;
+  }
+  .addon-callout--premium .addon-body h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .addon-callout--premium .addon-body p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .addon-features {
+    gap: 8px;
+  }
+  .addon-features li {
+    padding: 10px 12px;
+    text-align: left;
+  }
+  .addon-features li span {
+    font-size: 13px;
+  }
+  .addon-cta {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
   .news {
     padding: 56px 0;
   }
+  
   .news-title {
     font-size: 26px;
     padding-left: 16px;
   }
-  .news-title::before {
-    width: 4px;
+  .news-title::after {
+    width: 100%;
   }
   .news-subtitle {
     font-size: 15px;
@@ -831,6 +965,30 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
+  
+  .hero-card__text {
+    font-size: 14px;
+  }
+  
+  .timeline-description {
+    font-size: 14px;
+  }
+  
+  .timeline-date {
+    font-size: 14px;
+  }
+  
+  .timeline-title {
+    font-size: 16px;
+  }
+  
+  .antivirus-card__headline {
+    font-size: 14px;
+  }
+  
+  .antivirus-card__description {
+    font-size: 12px;
+  }
   .hero-features .feature:nth-child(3) {
     grid-column: 1 / -1;
   }
@@ -847,7 +1005,7 @@
   }
 
   .section-head h2 {
-    font-size: 20px;
+    font-size: clamp(18px, 4vw, 22px);
   }
 
   .btn {
@@ -994,5 +1152,425 @@
   .pricing-all-mobile {
     display: block;
     padding: 0 var(--page-padding, 16px);
+  }
+}
+
+/* Dark theme responsive styles */
+@media (max-width: 768px) {
+  .addon-callout--dark {
+    margin-top: 32px;
+    border-radius: 24px;
+    border-width: 1px;
+  }
+
+  .addon-callout--dark .addon-callout__content {
+    padding: 32px 28px;
+    gap: 20px;
+  }
+
+  .addon-callout--dark .addon-icon--premium {
+    width: 60px;
+    height: 60px;
+  }
+
+  .addon-callout--dark .addon-body h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .addon-callout--dark .addon-body p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .addon-callout--dark .addon-features {
+    gap: 10px;
+  }
+
+  .addon-callout--dark .addon-features li {
+    padding: 12px 14px;
+  }
+
+  .addon-callout--dark .addon-features li span {
+    font-size: 14px;
+  }
+
+  .addon-callout--dark .addon-cta {
+    padding: 16px 28px;
+    font-size: 16px;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .addon-callout--dark {
+    padding: 20px 18px;
+    margin-top: 28px;
+    border-radius: 24px;
+  }
+
+  .addon-callout--dark .addon-callout__content {
+    padding: 24px 20px;
+  }
+
+  .addon-callout--dark .addon-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .addon-callout--dark .addon-icon--premium {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto;
+  }
+
+  .addon-callout--dark .addon-body h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .addon-callout--dark .addon-body p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .addon-callout--dark .addon-features {
+    gap: 8px;
+  }
+
+  .addon-callout--dark .addon-features li {
+    padding: 10px 12px;
+    text-align: left;
+  }
+
+  .addon-callout--dark .addon-features li span {
+    font-size: 13px;
+  }
+
+  .addon-callout--dark .addon-cta {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Animated theme responsive styles */
+@media (max-width: 768px) {
+  .addon-callout--animated {
+    margin-top: 32px;
+    border-radius: 24px;
+    border-width: 1px;
+    animation: gentleFloatMobile 8s ease-in-out infinite;
+  }
+
+  @keyframes gentleFloatMobile {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-2px); }
+  }
+
+  .addon-callout--animated .addon-callout__content {
+    padding: 32px 28px;
+    gap: 20px;
+  }
+
+  .addon-callout--animated .addon-icon--premium {
+    width: 60px;
+    height: 60px;
+  }
+
+  .addon-callout--animated .addon-body h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .addon-callout--animated .addon-body p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .addon-callout--animated .addon-features {
+    gap: 10px;
+  }
+
+  .addon-callout--animated .addon-features li {
+    padding: 12px 14px;
+  }
+
+  .addon-callout--animated .addon-features li span {
+    font-size: 14px;
+  }
+
+  .addon-callout--animated .addon-cta {
+    padding: 16px 28px;
+    font-size: 16px;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .addon-callout--animated {
+    padding: 20px 18px;
+    margin-top: 28px;
+    border-radius: 24px;
+    animation: none; /* Disable animation on small screens */
+  }
+
+  .addon-callout--animated .addon-callout__content {
+    padding: 24px 20px;
+  }
+
+  .addon-callout--animated .addon-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .addon-callout--animated .addon-icon--premium {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto;
+    animation: iconPulseMobile 4s ease-in-out infinite;
+  }
+
+  @keyframes iconPulseMobile {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  .addon-callout--animated .addon-body h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .addon-callout--animated .addon-body p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .addon-callout--animated .addon-features {
+    gap: 8px;
+  }
+
+  .addon-callout--animated .addon-features li {
+    padding: 10px 12px;
+    text-align: left;
+    animation: none; /* Disable complex animations on mobile */
+  }
+
+  .addon-callout--animated .addon-features li span {
+    font-size: 13px;
+  }
+
+  .addon-callout--animated .addon-cta {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
+/* News variants responsive styles */
+@media (max-width: 768px) {
+  .news--premium .news-item {
+    padding: 20px 24px;
+    border-radius: 20px;
+  }
+
+  .news--animated .news-item {
+    animation: none; /* Disable animations on tablets */
+  }
+
+  .news--animated .news-item__arrow {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .news--premium .news-item {
+    padding: 16px 20px;
+    border-radius: 16px;
+  }
+
+  .news--animated .news-item {
+    animation: none; /* Disable animations on mobile */
+  }
+
+  .news--animated .news-item__arrow {
+    animation: none;
+  }
+
+  /* Expandable news responsive styles */
+  .news-item__expandable {
+    margin-top: 16px;
+  }
+
+  .news-item__expandable-content {
+    padding: 20px;
+  }
+
+  .news-item__expandable-description {
+    font-size: 14px;
+  }
+
+  .news-item__expandable-meta {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .news-item__expandable-meta-item {
+    font-size: 13px;
+  }
+
+  .news-item__expandable-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .news-item__expandable-link {
+    padding: 12px 18px;
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  /* Trusted companies responsive */
+  .trusted-companies {
+    padding: 60px 0;
+  }
+
+  .trusted-companies__header {
+    margin-bottom: 40px;
+  }
+
+
+  .trusted-companies__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 600px;
+  }
+
+  .trusted-companies__item {
+    height: 60px;
+    padding: 15px;
+  }
+
+  .trusted-companies__logo img {
+    max-width: 100px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 640px) {
+  .trusted-companies__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 300px;
+  }
+
+  .trusted-companies__item {
+    height: 80px;
+    padding: 20px;
+  }
+
+  .trusted-companies__logo img {
+    max-width: 150px;
+    max-height: 50px;
+  }
+  .news-variants-panel {
+    margin: 28px 0 12px;
+    padding: 16px;
+  }
+
+  .news-variants-panel__content h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .news-variant-btn {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .news-variant-btn__icon {
+    font-size: 18px;
+  }
+
+  .news-variant-btn__text {
+    font-size: 12px;
+  }
+
+  .news-variant-btn__text small {
+    font-size: 9px;
+  }
+}
+
+/* Design variants panel responsive */
+@media (max-width: 768px) {
+  .design-variants-panel {
+    margin: 32px 0 16px;
+    padding: 20px;
+  }
+
+  .design-variants-panel__content h4 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .design-variants-panel__buttons {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .variant-btn {
+    flex-direction: row;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .variant-btn__icon {
+    font-size: 20px;
+  }
+
+  .variant-btn__text {
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .variant-btn__text small {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .design-variants-panel {
+    margin: 28px 0 12px;
+    padding: 16px;
+  }
+
+  .design-variants-panel__content h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .variant-btn {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .variant-btn__icon {
+    font-size: 18px;
+  }
+
+  .variant-btn__text {
+    font-size: 12px;
+  }
+
+  .variant-btn__text small {
+    font-size: 9px;
   }
 }

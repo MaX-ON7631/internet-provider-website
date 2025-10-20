@@ -55,9 +55,9 @@
         
         <!-- Desktop Navigation -->
         <nav class="main-nav desktop-nav">
-          <a href="#services">Услуги</a>
           <a href="#about">О нас</a>
-          <a href="#news">Новости</a>
+          <a href="#services">Услуги</a>
+          <a href="#news-section">Новости</a>
           <a href="#contacts">Контакты</a>
         </nav>
         
@@ -131,6 +131,13 @@
         </div>
         
         <nav class="mobile-nav">
+          <a href="#about" class="mobile-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>О нас</span>
+          </a>
           <a href="#services" class="mobile-nav-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 20h.01"></path>
@@ -140,14 +147,7 @@
             </svg>
             <span>Услуги</span>
           </a>
-          <a href="#about" class="mobile-nav-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span>О нас</span>
-          </a>
-          <a href="#news" class="mobile-nav-item">
+          <a href="#news-section" class="mobile-nav-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
               <line x1="22" x2="12" y1="6" y2="13"></line>
@@ -252,7 +252,7 @@
             <p>Оптоволоконный интернет до 1 Гбит/с, интерактивное телевидение и телефония без ограничений — всё, чтобы дома всегда был стабильный онлайн.</p>
             <div class="audience-section__actions">
               <a class="btn btn-primary audience-section__cta" href="#services">Выбрать тариф</a>
-              <a class="btn btn-outline audience-section__cta audience-section__cta--ghost" href="#contacts">Подключить интернет</a>
+              <a class="btn btn-outline audience-section__cta audience-section__cta--ghost" href="#contacts">Получить консультацию</a>
             </div>
           </div>
         </div>
@@ -265,7 +265,7 @@
             <p>Выделенные каналы связи, SLA 99.9%, корпоративная телефония и облачные сервисы — решения, которые растут вместе с вашей компанией.</p>
             <div class="audience-section__actions">
               <a class="btn btn-primary audience-section__cta" href="business.html">Решения для бизнеса</a>
-              <a class="btn btn-outline audience-section__cta audience-section__cta--ghost" href="#contacts">Оставить заявку</a>
+              <a class="btn btn-outline audience-section__cta audience-section__cta--ghost" href="#contacts">Получить консультацию</a>
             </div>
           </div>
           </div>
@@ -274,9 +274,9 @@
 
       <section id="about" class="about">
         <div class="container about-inner">
-          <div class="about-head">
+          <div class="section-head center">
             <h2>Информация о компании</h2>
-            <p class="about-subtitle">Компания "АйПи ТелКом" была создана в 2001 г. как Интернет-провайдер. В дальнейшем наши направления деятельности постепенно дополнялись и расширялись.</p>
+            <p>Компания "АйПи ТелКом" была создана в 2001 г. как Интернет-провайдер. В дальнейшем наши направления деятельности постепенно дополнялись и расширялись.</p>
           </div>
           
           <div class="timeline">
@@ -586,76 +586,259 @@
             </div>
           </section>
 
-          <section class="addon-callout">
-            <div class="addon-content">
-              <div class="addon-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="addon-body">
-                <h3>Городские телефоны</h3>
-                <p>При подключении по технологии GPON вы можете добавить городскую телефонную связь от IPTelcom.</p>
-                <ul>
-                  <li>Безлимитные звонки по городу Минск</li>
-                  <li>Междугородние и международные — по тарифам РУП «Белтелеком»</li>
-                  <li>3,50 руб./мес за номер (включая НДС)</li>
-                </ul>
+          <!-- Trusted Companies Section -->
+          <section class="trusted-companies">
+            <div class="container">
+              <header class="section-head center">
+                <h2>Нам доверяют</h2>
+                <p>Более 1000 компаний уже выбрали наши решения для развития своего бизнеса</p>
+              </header>
+              
+              <div class="trusted-companies__grid">
+                <div class="trusted-companies__item">
+                  <div class="trusted-companies__logo">
+                    <img src="img/logos/MTS_logo.svg.png" alt="МТС" />
+                  </div>
+                </div>
+                <div class="trusted-companies__item">
+                  <div class="trusted-companies__logo">
+                    <img src="img/logos/Kaspersky_logo.svg.png" alt="Лаборатория Касперского" />
+                  </div>
+                </div>
+                <div class="trusted-companies__item">
+                  <div class="trusted-companies__logo">
+                    <img src="img/logos/MES-logo.svg.png" alt="Минэнерго" />
+                  </div>
+                </div>
               </div>
             </div>
-            <a class="btn btn-outline" href="#contacts">Оставить заявку</a>
+          </section>
+
+          <section class="addon-callout addon-callout--premium" id="addon-callout">
+            <div class="addon-callout__background" aria-hidden="true"></div>
+            <div class="addon-callout__content">
+              <div class="addon-content">
+                <div class="addon-icon addon-icon--premium" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="addon-body">
+                  <div class="addon-header">
+                    <span class="addon-badge">Дополнительная услуга</span>
+                    <h3>Городские телефоны</h3>
+                  </div>
+                  <p>При подключении по технологии GPON вы можете добавить городскую телефонную связь от IPTelcom.</p>
+                  <ul class="addon-features">
+                    <li>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Безлимитные звонки по городу Минск</span>
+                    </li>
+                    <li>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Междугородние и международные — по тарифам РУП «Белтелеком»</span>
+                    </li>
+                    <li>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>3,50 руб./мес за номер (включая НДС)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a class="btn btn-primary addon-cta" href="#contacts">Оставить заявку</a>
+            </div>
           </section>
         </div>
       </section>
-      <section id="news" class="news">
+      <section id="news-section" class="news">
         <div class="container news-inner">
           <header class="news-header">
             <h2 class="news-title">Новости</h2>
             <p class="news-subtitle">Последние обновления компании и предложения для абонентов.</p>
           </header>
-          <ul class="news-list">
-            <li>
-              <a class="news-item" href="news/domashniy-plus.html">
-                <div class="news-item__meta">
-                  <time datetime="2025-10-10">10 октября 2025</time>
+           <ul class="news-list">
+             <li class="news-item-wrapper">
+               <div class="news-item">
+                 <div class="news-item__header">
+                   <div class="news-item__meta">
+                     <time datetime="2025-10-10">10 октября 2025</time>
+                   </div>
+                   <div class="news-item__content">
+                     <h3 class="news-item__title">Теперь можно пополнить баланс через Telegram-бота</h3>
+                     <span class="news-item__arrow" aria-hidden="true">
+                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                         <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                       </svg>
+                     </span>
+                   </div>
+                 </div>
+                 <div class="news-item__expandable">
+                   <div class="news-item__expandable-content">
+                     <p class="news-item__expandable-description">
+                       Удобный способ управления счетом прямо из мессенджера. Теперь вы можете пополнить баланс, проверить остаток средств и получить справку о тарифе, не выходя из Telegram. Быстро, безопасно и без комиссий.
+                     </p>
+                     <div class="news-item__expandable-meta">
+                       <div class="news-item__expandable-meta-item">
+                         <svg viewBox="0 0 24 24" fill="none">
+                           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                         <span>Новая функция</span>
+                       </div>
+                       <div class="news-item__expandable-meta-item">
+                         <svg viewBox="0 0 24 24" fill="none">
+                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                         <span>Без комиссий</span>
+                       </div>
+                       <div class="news-item__expandable-meta-item">
+                         <svg viewBox="0 0 24 24" fill="none">
+                           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                         <span>Безопасно</span>
+                       </div>
+                     </div>
+                     <div class="news-item__expandable-actions">
+                       <a href="news/domashniy-plus.html" class="news-item__expandable-link">
+                         Подробнее
+                         <svg viewBox="0 0 24 24" fill="none">
+                           <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                       </a>
+                       <a href="#" class="news-item__expandable-link">
+                         Попробовать
+                         <svg viewBox="0 0 24 24" fill="none">
+                           <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                       </a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </li>
+            <li class="news-item-wrapper">
+              <div class="news-item">
+                <div class="news-item__header">
+                  <div class="news-item__meta">
+                    <time datetime="2025-10-05">5 октября 2025</time>
+                  </div>
+                  <div class="news-item__content">
+                    <h3 class="news-item__title">Расширяем покрытие в Минске</h3>
+                    <span class="news-item__arrow" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-                <div class="news-item__content">
-                  <h3 class="news-item__title">Теперь можно пополнить баланс через Telegram-бота</h3>
-                  <span class="news-item__arrow" aria-hidden="true">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
+                <div class="news-item__expandable">
+                  <div class="news-item__expandable-content">
+                    <p class="news-item__expandable-description">
+                      Мы продолжаем расширять зону покрытия высокоскоростного интернета в Минске. Новые районы получат доступ к современным технологиям связи. Улучшена инфраструктура в жилых массивах и деловых центрах.
+                    </p>
+                    <div class="news-item__expandable-meta">
+                      <div class="news-item__expandable-meta-item">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Минск</span>
+                      </div>
+                      <div class="news-item__expandable-meta-item">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Инфраструктура</span>
+                      </div>
+                      <div class="news-item__expandable-meta-item">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Высокие скорости</span>
+                      </div>
+                    </div>
+                    <div class="news-item__expandable-actions">
+                      <a href="news/gomel-expansion.html" class="news-item__expandable-link">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                      <a href="#" class="news-item__expandable-link">
+                        Карта покрытия
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </a>
+              </div>
             </li>
-            <li>
-              <a class="news-item" href="news/gomel-expansion.html">
-                <div class="news-item__meta">
-                  <time datetime="2025-10-05">5 октября 2025</time>
+            <li class="news-item-wrapper">
+              <div class="news-item">
+                <div class="news-item__header">
+                  <div class="news-item__meta">
+                    <time datetime="2025-09-28">28 сентября 2025</time>
+                  </div>
+                  <div class="news-item__content">
+                    <h3 class="news-item__title">Тариф «Социальный» стал ещё доступнее</h3>
+                    <span class="news-item__arrow" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-                <div class="news-item__content">
-                  <h3 class="news-item__title">Расширяем покрытие в Минске</h3>
-                  <span class="news-item__arrow" aria-hidden="true">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
+                <div class="news-item__expandable">
+                  <div class="news-item__expandable-content">
+                    <p class="news-item__expandable-description">
+                      Мы снижаем стоимость тарифа «Социальный» на 20% для льготных категорий граждан. Теперь пенсионеры, студенты и многодетные семьи могут пользоваться качественными услугами связи по еще более доступным ценам.
+                    </p>
+                    <div class="news-item__expandable-meta">
+                      <div class="news-item__expandable-meta-item">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>-20% скидка</span>
+                      </div>
+                      <div class="news-item__expandable-meta-item">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Льготные категории</span>
+                      </div>
+                      <div class="news-item__expandable-meta-item">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Социальная поддержка</span>
+                      </div>
+                    </div>
+                    <div class="news-item__expandable-actions">
+                      <a href="news/speed-upgrade.html" class="news-item__expandable-link">
+                        Подробнее
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                      <a href="#" class="news-item__expandable-link">
+                        Подключить
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a class="news-item" href="news/speed-upgrade.html">
-                <div class="news-item__meta">
-                  <time datetime="2025-09-28">28 сентября 2025</time>
-                </div>
-                <div class="news-item__content">
-                  <h3 class="news-item__title">Тариф «Социальный» стал ещё доступнее</h3>
-                  <span class="news-item__arrow" aria-hidden="true">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </a>
+              </div>
             </li>
           </ul>
           <div class="news-footer">
@@ -770,6 +953,9 @@
         </span>
       </a>
     </aside>
+    
+    <script src="js/main.js"></script>
+    <script src="js/news-expandable.js"></script>
   </body>
   
 </html>

@@ -496,7 +496,7 @@
 .hero-card__text {
   margin: 0;
   color: rgba(15, 23, 42, 0.72);
-  font-size: clamp(16px, 1.8vw, 18px);
+  font-size: 22px;
   max-width: 520px;
 }
 
@@ -959,46 +959,7 @@
   box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
 }
 
-/* Unified red lines for all sections */
-section {
-  position: relative;
-}
-
-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    rgba(220, 38, 38, 0.8) 0%,
-    rgba(239, 68, 68, 1) 25%,
-    rgba(248, 113, 113, 1) 50%,
-    rgba(239, 68, 68, 1) 75%,
-    rgba(220, 38, 38, 0.8) 100%
-  );
-  z-index: 1;
-}
-
-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    rgba(220, 38, 38, 0.8) 0%,
-    rgba(239, 68, 68, 1) 25%,
-    rgba(248, 113, 113, 1) 50%,
-    rgba(239, 68, 68, 1) 75%,
-    rgba(220, 38, 38, 0.8) 100%
-  );
-  z-index: 1;
-}
+/* Red lines removed */
 
 /* Force About section styles */
 .about * {
@@ -1163,7 +1124,7 @@ section::after {
 }
 
 .timeline-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   color: #ffffff;
   margin: 0 0 8px 0;
@@ -1177,7 +1138,7 @@ section::after {
 }
 
 .timeline-description {
-  font-size: 14px;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
   line-height: 1.5;
@@ -1187,7 +1148,7 @@ section::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.1);
@@ -1340,15 +1301,25 @@ section::after {
 
 .section-head h2 { 
   margin: 0; 
-  font-size: 28px; 
+  font-size: clamp(28px, 3.6vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Специальные стили для секции тарифов */
 .services .section-head h2 {
-  font-size: 28px;
+  /* Используем общий стиль заголовков секций с градиентом */
+  font-size: clamp(28px, 3.6vw, 36px);
   font-weight: 700;
+  letter-spacing: -0.01em;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
@@ -1365,7 +1336,10 @@ section::after {
 
 .section-head p { 
   margin: 0; 
-  color: var(--muted); 
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -1379,7 +1353,8 @@ section::after {
   background: transparent;
   position: relative;
   z-index: 1;
-  padding-top: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   margin-top: 40px;
 }
 
